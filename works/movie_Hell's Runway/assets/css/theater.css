@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+header .logo{
+	display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner_1 h2{
+	font-size: 36px;
+    color: #fff;
+	margin: 30px 0;
+	border-bottom:1px solid #ccc;
+	/* background-color: aqua; */
+}
+
+.inner_1 h2 span{
+	font-size: 16px;
+	padding: 0 0 0 20px;
+}
+
+.banner_img{
+	max-width:1000px;
+	margin: 30px auto;
+	text-align:center;
+	/* background-color: aqua; */
+}
+
+.tikect_img{
+	text-align: center;
+	margin:0 auto 30px;
+	/* background-color: aqua; */
+}
+
+.attention_1{
+	/*padding:0px 0 5px 40px;*/
+	line-height:1.2;
+	color:#fff;
+	text-align:left;
+	padding-bottom:30px;
+	/* background-color: aqua; */
+}
+
+.attention_2{
+	color:#fff;
+	text-align: right;
+	padding-bottom:30px;
+	/* background-color: aqua; */
+}
+
+a:link { color:#fff; text-decoration:none; }
+a:visited { color:#fff; text-decoration:none; }
+a:hover { color:#fff000; text-decoration:underline; }
+a:active { color:#fff000; text-decoration:none; }
+
+.local_navi{
+	clear:both;
+	width:100%;
+	max-width: 825px;
+	text-align:center;
+	margin:0 auto 20px;
+	color:#bbb;
+}
+
+.local_navi a{
+	color:#fff000;
+}
+
+.local_navi a:hover{
+	background:rgba(255,255,255,0.1);
+}
+
+table{
+	width:100%;
+	max-width:1000px;
+	margin:0 auto 30px;
+	border-collapse:collapse;
+	border-top:1px solid #888;
+	border-bottom:1px solid #888;
+	/*border-spacing: 2px;*/
+}
+
+table td{
+	border-bottom: rgba(255,255,255,0.5) dotted 1px;
+}
+
+table tr th,
+table tr td{
+	padding:5px;
+	text-align:center;
+	background:rgba(255,255,255,0.05);
+	color:#fff;
+}
+
+table tr th{
+	color: #fff;
+	font-weight:bold;
+	background:rgba(255,255,255,0.1);
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #888;
+}
+
+table tr td.Prefecture{
+	/*background: rgba(12,35,111,0.3);*/
+	border-bottom:1px solid #888;
+	
+	/*border:1px dotted #555;*/
+}
+
+table tr th.t_area{
+	width:8%;
+}
+
+table tr th.t_theater{
+	width:32%;
+}
+
+table tr th.t_date{
+	width:22%;
+}
+
+table tr th.t_ticket{
+	width:8%;
+}
+
+table tr th.t_8cam{
+	width:30%;
+}
+
+table tr.border{
+	border-bottom:1px solid #eee;
+}
+
+
+table tr th.t_area_full{
+	background:#ddd;
+	color:#555;
+	font-weight:bold
+}
+
+table tr th.t_area_full span{
+	color:#555;
+}
+
+table tr td{
+	color:#fff;
+}
+
+table .Prefecture{
+	width:8%;
+}
+
+table .t_n{
+	width:32%;
+	word-break:break-all !important;
+	word-wrap: break-word !important;
+}
+
+table .t_n a{
+	word-break:break-all !important;
+	word-wrap: break-word !important;
+}
+table .t_d{
+	width:22%;
+}
+
+.dboder{
+	margin: 0;
+	padding: 0 0 5px 0;
+	border-bottom:1px solid #888;
+}
+
+.am{
+    margin: 20px 0;
+    display: inline-block;
+    width: 100%;
+    max-width: 1280px;
+	text-align:center;
+}
+
+.back_button{
+	border:1px #fff solid;
+	width:20%;
+	max-width:150px;
+	display:block;
+	padding:10px 0;
+	margin:0 auto;
+}
+
+.back_button:hover{
+	border:1px #ece226 solid;
+}
+
+/* -----------------------------------------
+  1024px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:1024px){
+    
+    /* ヘッダーロゴを削除 */
+	header .logo{
+		display: none;
+	}
+
+	.inner_1{
+		padding: 0 10px;
+		/* background-color: aqua; */
+	}
+}
+
+/* -----------------------------------------
+  500px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:500px){
+
+	a:link { color:#F2FF17; text-decoration:none; }
+	a:visited { color:#F2FF17; text-decoration:none; }
+	a:hover { color:#fff; text-decoration:underline; }
+	a:active { color:#fff; text-decoration:none; }
+	
+	.tikect_img{
+		margin:0 auto 10px;
+	}
+
+	.attention_1{
+		font-size: 14px;
+		line-height:1.2em;
+		padding-bottom:10px;
+		/* background-color: aqua; */
+	}
+
+	.attention_2{
+		font-size: 14px;
+		padding-bottom:10px;
+		/* background-color: aqua; */
+	}
+
+	table tr th,
+	table tr td{
+		font-size: 14px;
+	}
+
+	.am{
+		text-align: center;
+		margin: 0 auto;
+		margin-top:0 !important;
+		margin-bottom: 20px;
+			display: block;
+	}
+}

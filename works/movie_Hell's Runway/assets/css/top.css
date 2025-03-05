@@ -1,0 +1,1198 @@
+@charset "utf-8";
+
+#info{
+    padding: 40px 20px 80px;
+    width: 100%;
+    margin: 0 0 0 auto;
+}
+
+#info .btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#info .btns div{
+    margin: 0 10px 10px;
+    position: relative;
+    max-width: 150px;
+    width: 100%;
+}
+
+#info .btns div a{
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto 0;
+    display: block;
+    max-width: 240px;
+    width: 100%;
+}
+
+#info .btns div a{
+    transition: opacity .3s;
+}
+
+#info .btns div a:hover{
+    opacity: .7;
+}
+
+
+#trailer .section_inner{
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#trailer .section_inner .section_main{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#trailer .section_inner .section_main .youtube_embed{
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: solid 1px red;
+}
+
+#trailer .section_inner .section_main .youtube_embed iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ---------------------------
+    メインビジュアルエリア 
+---------------------------*/
+
+.mv{
+    height: 820px;
+}
+
+.mv_area_1{
+    width: 100%;
+    height: 100%;
+    background: url(../images/mv_1280x820.png) no-repeat center / cover;
+}
+
+.mv_area_1 .inner_1{
+    position: relative;
+}
+
+.mv_area_1 .inner_1 .item_1{
+    position: absolute;
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.mv_area_1 .inner_1 .item_2{
+    position: absolute;
+    /* ヘッダーを固定したことによるヘッダーの高さ48pxを引いた位置に配置 222px - 48px */
+    top: 174px;
+    right: 100px;
+    /* background-color: aqua; */
+}
+
+.mv_area_1 .inner_1 .item_3{
+    position: absolute;
+    /* ヘッダーを固定したことによるヘッダーの高さ48pxを引いた位置に配置 222px - 48px */
+    top: 174px;
+    left: 10px;
+    /* background-color: aqua; */
+}
+
+.mv_area_1 .inner_1 .item_4{
+    position: absolute;
+    padding-top: 60px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    /* background-color: aqua; */
+}
+
+.mv_area_1 .inner_1 .item_5{
+    position: absolute;
+    padding-top: 570px;
+    width: 100%;
+    text-align: center;
+    display: none;
+    /* background-color: aqua; */
+}
+
+.mv_area_2 .flex{
+    align-items: end;
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+/* 直属の子要素のflexのみ適用。配下の孫要素のflexは除外 */
+.mv_area_2 > .flex{
+    justify-content: space-between;
+}
+
+.mv_area_2 .flex .group_1{
+    flex-direction: column;
+    row-gap: 10px;
+    padding-left: 10px;
+}
+
+/* flexにしないのであれば、以下の記述でバナー間の余白を作る
+.mv_area_2 .flex .group_1 .banner_2{
+    padding-top: 10px;
+} */
+
+.mv_area_2 .flex .group_2{
+    gap: 10px;
+    padding-right: 10px;
+    /* background-color: aqua; */
+}
+
+.mv_area_2 .item_6{
+    padding-top: 220px;
+    width: 100%;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.mv_area_2{
+    margin-top: -310px;
+}
+
+.mv_area_2 .flex .group_1 .banner_1 a{
+    transition: opacity .3s;
+}
+
+.mv_area_2 .flex .group_1 .banner_1 a:hover{
+    opacity: .7;
+}
+
+.mv_area_2 .flex .group_1 .banner_2 a{
+    transition: opacity .3s;
+}
+
+.mv_area_2 .flex .group_1 .banner_2 a:hover{
+    opacity: .7;
+}
+
+.mv_area_2 .flex .group_2 .banner_3 a{
+    transition: opacity .3s;
+}
+
+.mv_area_2 .flex .group_2 .banner_3 a:hover{
+    opacity: .7;
+}
+
+.mv_area_2 .flex .group_2 .banner_4 a{
+    transition: opacity .3s;
+}
+
+.mv_area_2 .flex .group_2 .banner_4 a:hover{
+    opacity: .7;
+}
+
+/* ---------------------------
+    スローガンエリア 
+---------------------------*/
+
+.slogan_area_1{
+    width: 100%;
+    height: 560px;
+    background: url(../images/slogan_1280x560.png) no-repeat center / cover;
+}
+
+.slogan_area_1 .inner_1{
+    position: relative;
+}
+
+.slogan_area_1 .inner_1 .item_1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 80px;
+    /* background-color: aqua; */
+}
+
+.slogan_area_1 .inner_1 .item_2{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 354px;
+    /* background-color: aqua; */
+}
+
+.slogan_area_1{
+    position: relative;
+}
+
+/* ボーダー */
+.slogan_area_1::before{
+    content:"";      /* 空っぽを差し込む*/
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:45px;
+    background: url(../images/border_before_1280x45.svg) repeat;
+    background-position: center;
+}
+
+.slogan_area_1::after{
+    content:"";      /* 空っぽを差し込む*/
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:45px;
+    background: url(../images/border_after_1280x45.svg) repeat;
+    background-position: center;
+}
+
+/* ---------------------------
+    イントロダクションエリア 
+---------------------------*/
+
+.intro_area_1{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    background: url(../images/introduction_1280x720.png) no-repeat center top / cover;
+}
+
+.intro_area_1 .inner_1{
+    position: relative;
+}
+
+.intro_area_1 .inner_1 .item_1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+.intro_area_1 .inner_1 .flex{
+    /* position: absolute; */
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 132px;
+    width: 100%;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.intro_area_1 .inner_1 .flex .text{
+    color: #fff;
+    line-height: 2em;
+    text-align: center;
+}
+
+/* ---------------------------
+    ストーリーエリア 
+---------------------------*/
+
+.story_area_1{
+    width: 100%;
+    height: auto;
+    background: url(../images/story_1280x800.png) no-repeat left / cover;
+}
+
+.story_area_1 .inner_1{
+    position: relative;
+}
+
+.story_area_1 .inner_1 .item_1{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+.story_area_1 .inner_1 .flex{
+    /* position: absolute; */
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    margin: 0 0 0 auto;
+    /* background-color: aqua; */
+}
+
+.story_area_1 .inner_1 .flex .item_2{
+    padding-top: 132px;
+    /* background-color: aqua; */
+}
+
+.story_area_1 .inner_1 .flex .text{
+    color: #fff;
+    line-height: 2em;
+    /* background-color: aqua; */
+}
+
+/* ---------------------------
+    プロダクションノートエリア 
+---------------------------*/
+
+.productions_area_1{
+    width: 100%;
+    height: 600px;
+    background: url(../images/productions_1280x600.png) no-repeat center / cover;
+    /* 子要素が一つの時に使用できる技 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productions_area_1 .inner_1{
+    position: relative;
+}
+
+.productions_area_1 .inner_1 .item_1{
+    /* position: absolute; */
+    width: 100%;
+    text-align: center;
+    /* padding-top: 223px; */
+    /* background-color: aqua; */
+}
+
+.productions_area_1{
+    position: relative;
+}
+
+/* ボーダー */
+.productions_area_1::before{
+    content:"";      /* 空っぽを差し込む*/
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:45px;
+    background: url(../images/border_before_1280x45.svg) repeat;
+    background-position: center;
+}
+
+/* ---------------------------
+    キャストエリア 
+---------------------------*/
+
+.cast_area_1 .inner_1 .item_1{
+    padding-top: 30px;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.cast_area_1 .inner_1 .group_1{
+    padding: 30px 80px;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+.cast_area_1 .inner_1 .group_2{
+    padding: 80px 0 20px;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+.cast_area_1 .inner_1 .group_3{
+    padding-bottom: 20px;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+/* ---------------------------
+    スタッフエリア 
+---------------------------*/
+
+/* パララックス効果 */
+.parallax_bg {
+    background-image: url('../images/productions_parallax2400x1600.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: right;
+    width: 100%;
+    height: 500px;
+}
+
+.staff_area_1{
+    width: 100%;
+    height: 998px;
+    background: url(../images/staff_1280x998.png) no-repeat center / cover;
+}
+
+.staff_area_1 .inner_1 .item_1{
+    padding-top: 30px;
+    text-align: center;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .flex{
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .flex .group_1{
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .flex .group_2{
+    flex-direction: column;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .director_1{
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .flex .group_1 .staff_1{
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .flex .group_2 .staff_3{
+    padding-top: 30px;
+    /* background-color: aqua; */
+}
+
+.staff_area_1 .inner_1 .flex .group_1 .staff_1 a{
+    overflow:hidden;
+}
+
+.staff_area_1 .inner_1 .flex .group_1 .staff_1 a img:hover{
+    transform:scale(1.1);
+	transition:0.3s;
+}
+
+.staff_area_1 .inner_1 .flex .group_1 .staff_2 a{
+    overflow:hidden;
+}
+
+.staff_area_1 .inner_1 .flex .group_1 .staff_2 a img:hover{
+    transform:scale(1.1);
+	transition:0.3s;
+}
+
+.staff_area_1 .inner_1 .flex .group_2 .staff_3 a{
+    overflow:hidden;
+}
+
+.staff_area_1 .inner_1 .flex .group_2 .staff_3 a img:hover{
+    transform:scale(1.1);
+	transition:0.3s;
+}
+
+.staff_area_1 .inner_1 .flex .group_2 .staff_4 a{
+    overflow:hidden;
+}
+
+.staff_area_1 .inner_1 .flex .group_2 .staff_4 a img:hover{
+    transform:scale(1.1);
+	transition:0.3s;
+}
+
+.staff_area_1 .inner_1 .director_1 a{
+    overflow:hidden;
+}
+
+.staff_area_1 .inner_1 .director_1 a img:hover{
+    transform:scale(1.1);
+	transition:0.3s;
+}
+
+.staff_area_1{
+    position: relative;
+}
+
+/* ボーダー */
+.staff_area_1::after{
+    content:"";      /* 空っぽを差し込む*/
+    position: absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:45px;
+    background: url(../images/border_staff_after_1280x45.svg) repeat;
+    background-position: center;
+}
+
+/* ---------------------------
+    アニメーション
+---------------------------*/
+
+/* 背景画像の無限横スクロールアニメ */
+
+@keyframes img-anime{
+    0%{
+        background-position: 0 0;
+    }
+
+    100%{
+        background-position: -1792px 0;
+        /* 「-1792px」＝用意した画像の横幅 */
+    }
+}
+
+.slider_area_1{
+    width: 100%;
+    height:170px;
+    /* 「170px」＝用意した画像の高さ */
+    background-image: url(../images/introduction_slide_01_1792x170.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: img-anime 24s linear infinite;
+}
+
+.slider_area_2{
+    width: 100%;
+    height:170px;
+    /* 「170px」＝用意した画像の高さ */
+    background-image: url(../images/introduction_slide_02_1792x170.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    animation: img-anime 24s linear infinite;
+}
+
+/* キャストおよびディレクターの写真をホバー時に光らせる */
+/* 参考：https://codingwonderland.net/css-hover-effects-examples/ */
+/* ボタンの基本スタイル */
+.cast_area_1 .inner_1 .group_1 .cast_1 a,
+.cast_area_1 .inner_1 .group_1 .cast_2 a,
+.cast_area_1 .inner_1 .group_2 .cast_3 a,
+.cast_area_1 .inner_1 .group_2 .cast_4 a,
+.cast_area_1 .inner_1 .group_2 .cast_5 a,
+.cast_area_1 .inner_1 .group_2 .cast_6 a,
+.cast_area_1 .inner_1 .group_3 .cast_7 a,
+.cast_area_1 .inner_1 .group_3 .cast_8 a,
+.cast_area_1 .inner_1 .group_3 .cast_9 a,
+.cast_area_1 .inner_1 .group_3 .cast_10 a{
+    position: relative;
+    display: block;
+    transition: .2s;
+}
+
+/* 光のスタイル */
+.cast_area_1 .inner_1 .group_1 .flash a,
+.cast_area_1 .inner_1 .group_2 .flash a,
+.cast_area_1 .inner_1 .group_3 .flash a{
+    overflow: hidden;
+}
+
+.cast_area_1 .inner_1 .group_1 .flash a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%);
+    transition: .5s;
+}
+
+/* ホバー時のスタイル */
+.cast_area_1 .inner_1 .group_1 .flash a:hover:before{
+    top: 0;
+    left: 100%;
+}
+
+.cast_area_1 .inner_1 .group_2 .flash a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%);
+    transition: .5s;
+}
+
+/* ホバー時のスタイル */
+.cast_area_1 .inner_1 .group_2 .flash a:hover:before{
+    top: 0;
+    left: 100%;
+}
+
+.cast_area_1 .inner_1 .group_3 .flash a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80%);
+    transition: .5s;
+}
+
+/* ホバー時のスタイル */
+.cast_area_1 .inner_1 .group_3 .flash a:hover:before{
+    top: 0;
+    left: 100%;
+}
+
+/* モーダルウィンドウ */
+.modal_window{
+    position: relative;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1080px;
+    background-color: #dfdddd;
+    border-radius: 5px;
+    z-index: 11;
+    padding: 50px 10px;
+}
+
+/* オーバーレイ */
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.modal_window .flex .flex{
+    flex-direction: column;
+}
+
+.modal_window .flex_box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* .modal_img img{
+    position: absolute;
+    top: 49.5%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+} */
+
+/* モーダルウィンドウ内の見出し */
+.modal_intro{
+    font-family: YakuHanJPs, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 30px 10px;
+}
+
+/* モーダルウィンドウ内の説明文 */
+.modal_text{
+    font-family: YakuHanJPs, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.2em;
+    text-align: left;
+    padding-left:10px;
+    /* background-color: aqua; */
+}
+
+/* 動画埋め込み用のオーバーレイ */
+.movie_overlay{
+    position: fixed; /* 固定位置にする */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+}
+
+/* スクロールアニメーション */
+.to_bottom{
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    top: 602px;
+    margin-left: -30px;
+}
+
+.arrows{
+    width: 100%;
+}
+
+.arrows path{
+    stroke: #ff00ff;
+    fill: transparent;
+    stroke-width: 1px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+.arrows path.a1{
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2{
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3{ 
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+
+/* -----------------------------------------
+  1024px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:1024px){
+
+    .video-container{
+        width: 600px;
+        height: auto;
+    }
+
+    /* ---------------------------
+    ストーリーエリア 
+    ---------------------------*/
+
+    .story_area_1 .inner_1 .flex .text{
+        font-size: 14px;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .story_area_1 .inner_1 .flex{
+        /* position: absolute; */
+        width: 100%;
+        margin: 0 0 0 auto;
+        text-align: center;
+        /* background-color: aqua; */
+    }
+
+    .story_area_1{
+        background-image: url(../images/story_1280x800.png) no-repeat;
+        background-position: -250px;
+        background-size: cover;
+        background-color:rgba(0,0,0,0.8);
+        background-blend-mode:multiply;
+        height: auto;
+        padding: 30px 5px;
+    }
+
+    /* ---------------------------
+    キャストエリア 
+    ---------------------------*/
+    .cast_area_1 .inner_1 .group_1{
+        padding: 30px 80px;
+        justify-content: space-around;
+        /* background-color: aqua; */
+    }
+    
+    .cast_area_1 .inner_1 .group_2{
+        padding: 0 0 30px 10px;
+        justify-content: space-around;
+        /* background-color: aqua; */
+    }
+    
+    .cast_area_1 .inner_1 .group_3{
+        padding-bottom: 20px;
+        justify-content: space-around;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_1 .cast_1{
+        width: 200px;
+        height: 200px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_1 .cast_2{
+        width: 200px;
+        height: 200px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_3{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_4{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_5{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_6{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_7{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_8{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_9{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_10{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+    
+}
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:768px){
+
+    /* ---------------------------
+        メインビジュアルエリア 
+    ---------------------------*/
+
+    .mv_area_1 .inner_1 .item_1{
+        padding-top: 180px;
+        /* background-color: aqua; */
+    }
+
+    .mv_area_1 .inner_1 .item_2{
+        display: none;
+    }
+
+    .mv_area_1 .inner_1 .item_3{
+        display: none;
+    }
+
+    .mv_area_1 .inner_1 .item_4{
+        display: block;
+        /* background-color: aqua; */
+    }
+
+    .mv_area_1 .inner_1 .item_5{
+        display: block;
+        /* background-color: aqua; */
+    }
+
+    /* バナーをMV外に出すことによる滑り込み対処用の記述
+    （後続の要素sloganにこのclass名をつける） */
+    /* バナーの高さ206px */
+    /* .banner_br{
+        padding-top: 206px;     
+    } */
+    
+    /* バナーを削除。直属の子要素のflexのみ適用。配下の孫要素のflexは除外 */
+    .mv_area_2 > .flex{
+        display: none;
+    }
+    
+    .mv_area_2{
+        /* 元々のmargin-top 365px - .mv_area_2 .flexの分の236pxを引く */
+        margin-top: -129px;
+    }
+
+    .to_bottom {
+        width: 60px;
+        height: 72px;
+        position: absolute;
+        left: 50%;
+        top: 645px;
+        margin-left: -30px;
+        /* background-color: aqua; */
+    }
+
+    .mv_area_2 .item_6{
+        padding-top: 60px;
+    }
+
+
+    /* ---------------------------
+        スローガンエリア 
+    ---------------------------*/
+
+    .slogan_area_1{
+        height: 300px;
+        padding: 30px 5px;
+    }
+
+    .slogan_area_1 .inner_1 .item_1{
+        text-align: center;
+        padding-top: 20px;
+        /* background-color: aqua; */
+    }
+    
+    .slogan_area_1 .inner_1 .item_2{
+        text-align: center;
+        padding-top: 160px;
+        /* background-color: aqua; */
+    }
+
+    /* ---------------------------
+        イントロダクションエリア 
+    ---------------------------*/
+
+    .intro_area_1{
+        height: auto;
+        padding: 30px 5px;
+    }
+
+    .intro_area_1 .inner_1 .flex .text{
+        font-size: 14px;
+        text-align: left;
+    }
+
+    /* ---------------------------
+        プロダクションエリア 
+    ---------------------------*/
+    .productions_area_1{
+        height: 300px;
+        padding: 0 5px;
+    }
+
+    /* ---------------------------
+        パララックスエリア 
+    ---------------------------*/
+    .parallax_bg{
+        height: 300px;
+    }
+
+    /* ---------------------------
+        スタッフエリア 
+    ---------------------------*/
+
+    .staff_area_1 .inner_1 .flex{
+        flex-direction: column;
+        align-items: center;
+        /* background-color: aqua; */
+    }
+
+    /* flexboxで要素の順番を入れ替える。 */
+    .child_1{
+        order: 1;
+    }
+    .child_3{
+        order: 2;
+    }
+
+    .staff_area_1 .inner_1 .flex .director_1{
+        text-align: center;
+        /* background-color: aqua; */
+    }
+
+    .staff_area_1 .inner_1 .flex .group_1{
+        text-align: center;
+        /* background-color: aqua; */
+    }
+
+    .staff_area_1 .inner_1 .flex .group_2{
+        text-align: center;
+        /* background-color: aqua; */
+    }
+
+    .staff_area_1 .inner_1 .flex .group_1 .staff_1{
+        padding-bottom:30px;
+        /* background-color: aqua; */
+    }
+
+    .staff_area_1 .inner_1 .flex .group_2 .staff_3{
+        padding-bottom:30px;
+        /* background-color: aqua; */
+    }
+
+    /* ---------------------------
+        モーダルウィンドウエリア 
+    ---------------------------*/
+    .modal_window{
+        padding: 30px 10px;
+    }
+
+    .modal_intro{
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 10px 10px 20px 10px;
+    }
+    
+    .modal_window .flex_box{
+        flex-direction: row;
+    }
+
+    .modal_window .flex_box .flex{
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .modal_window .flex .modal_img img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .modal_window .flex{
+        display: block;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* モーダルウィンドウ内の見出し */
+    .modal_intro{
+        font-size: 18px;
+    }
+
+    /* モーダルウィンドウ内の説明文 */
+    .modal_text{
+        font-size: 14px;
+    }
+}
+
+/* -----------------------------------------
+  428px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:428px){
+
+    .video-container {
+        width: 300px;
+        height: auto;
+    }
+
+    .mv_area_2 .item_6{
+        padding-top: 80px;
+    }
+
+    /* ---------------------------
+    キャストエリア 
+    ---------------------------*/
+    .cast_area_1 .inner_1 .group_1{
+        padding: 30px 0;
+        justify-content: space-around;
+        /* background-color: aqua; */
+    }
+    
+    .cast_area_1 .inner_1 .group_2{
+        padding: 0 0 30px 0;
+        justify-content: space-around;
+        /* background-color: aqua; */
+    }
+    
+    .cast_area_1 .inner_1 .group_3{
+        padding-bottom: 20px;
+        justify-content: space-around;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_1 .cast_1{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_1 .cast_2{
+        width: 150px;
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_3{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_4{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_5{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_2 .cast_6{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_7{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_8{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_9{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    .cast_area_1 .inner_1 .group_3 .cast_10{
+        width: 100px;
+        height: 100px;
+        /* background-color: aqua; */
+    }
+
+    /* ---------------------------
+        パララックスエリア 
+    ---------------------------*/
+    .parallax_bg{
+        display: none;
+    }
+}

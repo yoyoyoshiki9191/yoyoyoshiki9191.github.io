@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+header .logo{
+	display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner_1 h2{
+	font-size: 36px;
+    color: #fff;
+	margin: 30px 0 0;
+	border-bottom:1px solid #ccc;
+	/* background-color: aqua; */
+}
+
+.inner_1 h2 span{
+	font-size: 16px;
+	padding: 0 0 0 20px;
+}
+
+.reservation{
+	color: #F2FF17;
+	text-decoration: underline;
+}
+
+.reservation:hover{
+    color: #fff;
+}
+
+.flex{
+	justify-content: space-between;
+}
+
+dl{
+	width: 100%;
+	height:auto;
+	margin: 0;
+	padding: 30px 0;
+	border-bottom: #fff dotted 1px;
+	color:#fff;
+}
+
+dl:last-child{
+	border-bottom: none;
+}
+
+dl .flex{
+	padding-bottom: 20px;
+}
+
+dl .flex .heading{
+	font-weight: bold;
+	line-height: 1.5em;
+    color: #F2FF17;
+}
+
+dl .flex span{
+	font-size: 14px;
+	font-weight: 400;
+	display: block;
+	padding: 0 0 10px 0;
+	color:#fff;
+}
+
+dl dd{
+	font-size: 14px;
+	line-height:1.8em;
+	margin: 0;
+}
+
+dd span{
+	color:#F2FF17;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.news img{
+	width:100%;
+	max-width:600px;
+	height:auto;
+	margin-top: 0.8em;
+}
+
+img.size_s{
+	max-width:400px;
+}
+
+img.size_ss{
+	width: 100%;
+	max-width: 250px;
+	vertical-align:bottom;
+}
+
+/* ---------------------------
+    飾り付け
+---------------------------*/
+
+.item_1{
+    /* ブラウザ左に固定 */
+    position: fixed;
+    right:0;
+    bottom:50px;
+	opacity: .3;
+    z-index: 1;
+}
+
+/* ---------------------------
+    アニメーション
+---------------------------*/
+
+.item_1{
+	animation: zoomIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+	@keyframes zoomIn {
+		0% {
+		transform: scale(0.8);
+		}
+		100% {
+		transform: scale(1);
+		transform: translateX(-100px);
+		}
+	}
+
+
+/* -----------------------------------------
+  1024px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:1024px){
+    
+    /* ヘッダーロゴを削除 */
+	header .logo{
+		display: none;
+	}
+
+	.inner_1{
+		padding: 0 10px;
+		/* background-color: aqua; */
+	}
+
+}
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:768px){
+
+    .item_1{
+		display: none;
+	}
+
+	dl .flex{
+		flex-direction: column;
+	}
+
+	/* flexboxで要素の順番を入れ替える。 */
+	.child_1{
+		order: 1;
+	}
+	.child_2{
+		order: 0;
+	}
+	
+}
+
+/* -----------------------------------------
+  500px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:500px){
+
+	dl .flex .heading{
+		font-size: 14px;
+		line-height: 1.5em;
+	}
+	
+	dl .flex span{
+		font-size: 12px;
+	}
+	
+	dl dd{
+		font-size: 12px;
+	}
+
+
+}

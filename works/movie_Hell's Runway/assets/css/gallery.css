@@ -1,0 +1,257 @@
+@charset "utf-8";
+
+header .logo{
+	display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery_area_1{
+    position: relative;
+    width:auto;
+    height:auto;
+    /* background:red; */
+    margin:0 auto;
+}
+
+.neon{
+    position: absolute;
+    width:auto;
+    height:100px;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    text-align: center;
+    font-size:120px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: none;
+    /* background-color: aqua; */
+}
+
+.neon .gre{
+	color: rgba(125, 125, 125, 0.61);
+	text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.neon .red{
+	color: #c71515;
+	text-align: center;
+	text-shadow:
+	0 0 30px #EC637B, 
+	0 0 10px rgba(163, 20, 20, 0.41), 
+	0 0 100px #a30706, 
+	0 0 100px #8a0c0c, 
+	5px 9px 5px rgba(0, 0, 0, 0.5);
+}
+
+.neon .red{
+	animation: blink .3s infinite alternate;
+}
+
+.neon .delay{
+	animation-duration:6s;
+	animation-delay: 2s;
+	animation-direction: alternate;
+}
+
+.photo_area_1{
+    padding: 30px 0;
+    /* background-color: aqua; */
+}
+
+.photo_area_1 .inner_1 .flex{
+    justify-content: space-between;
+    padding: 10px 0;
+    /* background-color: aqua; */
+}
+
+.photo_area_1 .inner_1 .flex img{
+    width: 300px;
+    height: 300px;
+}
+
+.photo_area_1 .inner_1 .flex a{
+    overflow:hidden;
+}
+
+.photo_area_1 .inner_1 .flex a img:hover{
+    transform:scale(1.1);
+	transition:0.3s;
+}
+
+/* モーダルウィンドウ */
+.modal_window{
+    position: relative;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1080px;
+    background: linear-gradient(rgb(12,101,153),rgb(0,0,0));
+    border-radius: 5px;
+    z-index: 11;
+    padding: 50px 10px;
+}
+
+/* オーバーレイ */
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.modal_img{
+    text-align: center;
+}
+
+@keyframes blink {
+	0%   {}
+	50%  {}
+	60%{
+    text-shadow: 
+	0 0 2px rgba(255, 255, 255, .1), 
+	0 0 10px rgba(255, 255, 255, .4);
+    text-stroke: 2px rgba(255,255,255,0.05);
+	}
+70%{
+    text-shadow: 
+	0 0 2px rgba(255,255,255,1), 
+	0 0 10px rgba(255,255,255,1), 
+	0 0 20px rgba(255,255,255,1), 
+    0 0 30px rgba(255,255,255,1), 
+    0 0 40px #ff00de, 
+    0 0 70px #ff00de, 
+    0 0 80px #ff00de,
+    0 0 100px #ff00de;
+}
+80%{
+    text-shadow: 
+    0 0 2px rgba(255, 255, 255, .1), 
+    0 0 10px rgba(255, 255, 255, .4);
+    text-stroke: 2px rgba(255,255,255,0.05);
+}
+100% { 
+    text-shadow: 
+    0 0 2px rgba(255,255,255,1), 
+    0 0 10px rgba(255,255,255,1), 
+    0 0 20px rgba(255,255,255,1), 
+    0 0 30px rgba(255,255,255,1), 
+    0 0 40px #ff00de, 
+    0 0 70px #ff00de, 
+    0 0 80px #ff00de,
+    0 0 100px #ff00de;
+	}
+}
+
+/* .gallery_area_1{
+    width: 100%;
+    height: 800px;
+    background: url(../images/gallery_photo_16.jpg) no-repeat center / cover;
+} */
+
+/* .gallery_area_1 .inner_1{
+    position: relative;
+}
+
+.gallery_area_1{
+    position: relative;
+    width: 1000px;
+    height: 820px;
+    margin:30px auto 0;
+}
+
+.gallery_area_1 .slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width:100%;
+    height:820px;
+    margin: 0;
+    padding:0;
+    position:relative;
+    margin:30px auto 0;
+}
+
+.gallery_area_1 .neon{
+    position: absolute;
+    padding-top: 360px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    background-color: aqua;
+} */
+
+/* .gallery_area_1 .inner_1 .neon{
+    position: absolute;
+    padding-top: 360px;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+} */
+
+/* 見出し画像のフルードイメージ対応 */
+.gallery_area_1 .slider{
+    max-width: 100%;
+    height: auto;
+}
+
+/* -----------------------------------------
+  1024px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:1024px){
+    
+    /* ヘッダーロゴを削除 */
+	header .logo{
+		display: none;
+	}
+
+    .photo_area_1 .inner_1 .flex img{
+        width: 250px;
+        height: 250px;
+    }
+    
+}
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:768px){
+
+    .neon{
+        font-size:80px;
+    }
+
+    .photo_area_1 .inner_1 .flex img{
+        width: 200px;
+        height: 200px;
+    }
+
+}
+
+/* -----------------------------------------
+  500px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:500px){
+
+    .neon{
+        font-size:50px;
+    }
+
+    .photo_area_1 .inner_1 .flex img{
+        width: 100px;
+        height: 100px;
+    }
+
+}

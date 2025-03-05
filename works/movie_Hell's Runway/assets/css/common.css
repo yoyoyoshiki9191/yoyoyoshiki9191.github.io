@@ -1,0 +1,596 @@
+@charset "utf-8";
+
+/* ===========================================
+   ◆ リセットの役割をする記述 
+===========================================*/
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,figure{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    vertical-align: bottom;
+}
+
+iframe{
+    vertical-align: bottom;
+}
+
+*{
+    font-style: normal;
+}
+
+/* 横並び用class */
+.flex{
+    display: flex;
+}
+
+/* ===========================================
+   ◆ 全体に対する基本指定
+===========================================*/
+
+/* ページ内リンクのスムーススクロール */
+html{
+    scroll-behavior: smooth;
+}
+
+/* ページ内リンクのスムーススクロール時にヘッダー分の高さを調整する */
+html{
+    scroll-padding-top: 48px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: YuGothic,"Yu Gothic","游ゴシック","游ゴシック体","sans-serif";
+    color:#F2FF17;
+    /* line-height: 1;を指定して画像のbottomに余白を作らないようにする */
+    line-height: 1;
+    background: linear-gradient(to right,rgb(127,0,255),rgb(118,33,135),rgb(54,28,97))
+}
+
+.inner_1{
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.mv{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===========================================
+   ◆ ローディング画面
+===========================================*/
+.loading{
+    /*ローディング画面の縦横幅を画面いっぱいになるように指定*/
+    width: 100vw;
+    height: 100vh;
+    /*ローディング画面の表示位置を固定*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*ローディング画面を0.5秒かけて非表示にする*/
+    transition: all 0.5s linear;
+    z-index: 100;
+}
+
+/*ローディング画面を非表示にする*/
+.loading.loaded{
+    /*0.5秒かけてopacityを0にする*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shutter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color:#a0a0a0;
+}
+
+/* .loading-text {
+color: #FFF;
+font-size: 30px;
+margin-bottom: 30px;
+text-align: center;
+} */
+
+/* .spinner{
+display: block;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+border: 4px solid #FFF;
+border-left-color: #000000;
+margin-top: 10px;
+animation: spinner-rotation 1s linear infinite;
+} */
+
+/* アニメーションの設定 */
+/* @keyframes spinner-rotation {
+0% {
+    transform: rotate(0);
+}
+100% {
+    transform: rotate(360deg);
+}
+} */
+
+/* ===========================================
+   ◆ エリアごとの仕上げ
+===========================================*/
+
+/* ---------------------------
+    ヘッダーエリア 
+---------------------------*/
+
+header{
+    background-color: #1a1a1a;
+}
+
+/* ヘッダーまるごとブラウザ上部に固定 */
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 1;
+}
+
+/* ヘッダーを固定することによる滑り込み対処用の記述
+（ヘッダーの後続の要素にこのclass名をつける） */
+/* ヘッダーの高さ60px */
+.header_br{
+    padding-top: 60px;     
+}
+
+header .flex{
+    text-align: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    /* background-color: aqua; */
+}
+
+header .logo a{
+    transition: opacity .3s;
+}
+
+header .logo a:hover{
+    opacity: .7;
+}
+
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* LPであるTOPページは縦長でほかのページに飛ぶことがないから、ロゴいらない */
+    display: none;
+    /* background-color: aqua; */
+}
+
+header .navi .flex .top{
+    display: none;
+}
+
+/* ナビゲーション部分のスタイリング */
+/* ホバー表現のための記述 */
+.navi{
+    width: 100%;
+}
+
+.navi .flex{
+    justify-content: space-around;
+    padding: 15px 0;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.navi .flex li{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: Bold Italic;
+    text-align: center;
+}
+
+.navi .flex li a{
+    color: #F2FF17;
+    transition: color .3s;
+}
+
+.navi .flex li a:hover{
+    color: #BD0900;
+}
+
+
+header .flex .x a{
+    transition: opacity .3s;
+}
+
+header .flex .x a:hover{
+    opacity: .7;
+}
+
+header .flex .instagram a{
+    transition: opacity .3s;
+}
+
+header .flex .instagram a:hover{
+    opacity: .7;
+}
+
+/* ---------------------------
+    フッターエリア 
+---------------------------*/
+
+footer{
+    background-color: #1a1a1a;
+}
+
+footer .announce{
+    text-align: center;
+    padding: 20px 0;
+    /* background-color: aqua; */
+}
+
+/* footer .flex{
+    justify-content: center;
+    gap: 0 20px;
+    padding-bottom: 20px;
+}
+
+footer .flex a{
+    transition: opacity .3s;
+}
+
+footer .flex a:hover{
+    opacity: .7;
+} */
+
+/* コピーライト */
+footer .copyright{
+    color: #fff;
+    text-align: center;
+    padding-bottom: 10px;
+    /* background-color: aqua; */
+}
+
+
+/* ---------------------------
+    トップボタン 
+---------------------------*/
+
+.to-top img{
+    /* ブラウザ右下に固定 */
+    position: fixed;
+    right:5px;
+    bottom:5px;
+    z-index: 1;
+}
+
+.to-top a{
+    transition: opacity .3s;
+}
+
+.to-top a:hover{
+    opacity: .7;
+}
+
+/* ---------------------------
+    アニメーション
+---------------------------*/
+
+/* フェードアップアニメーション */
+@keyframes fadeUp{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.fadeUp{
+    opacity: 0;
+    transform: translateY(30px);
+    animation:fadeUp 2s ease forwards;
+}
+
+/* 1個ずつタイミングをずらすなら・・・↓ */
+.delay_1{
+    animation-delay: 0s;
+}
+
+.delay_2{
+    animation-delay: 0.3s;
+}
+
+.delay_3{
+    animation-delay: 0.6s;
+}
+
+.delay_4{
+    animation-delay: 0.8s;
+}
+
+.delay_5{
+    animation-delay: 1.0s;
+}
+
+.delay_6{
+    animation-delay: 1.2s;
+}
+
+.delay_7{
+    animation-delay: 1.4s;
+}
+
+.delay_8{
+    animation-delay: 1.6s;
+}
+
+
+
+/* -------------------------------------------
+
+    ★フルードデザイン（リキッドデザイン）対応
+    　フルードデザイン = ブラウザの幅に応じて要素が伸縮するデザインのこと
+    　→ pxを使った固定幅での指定を％やmax-width、min-widthにする
+　　　　　　　　　　　　＋
+    ★フルードイメージ対応
+    imgが親要素に合わせて伸縮可能になるようにする
+
+    【基本的な流れ】
+    1.コンテンツ幅となる要素をブラウザの縮小に対応できる可変幅にしておく。(%の単位やmax-widthで対応)
+    2.中身の子要素も親に合わせて縮小するように調整する。
+
+    ※今回はもともとの指定を上書きする形でフルード対応していますが、
+    初めから%の単位やmax-widthで書いておくという手段をとることもできます。
+------------------------------------------- */
+
+
+/* コンテンツ幅(.inner_1)の指定方法を修正 */
+
+.inner_1{
+    width: auto;        
+    max-width: 1080px;
+    min-width: 320px;
+}
+    /* ↑上記でやっていること
+        ・もともと記述していた固定幅の「width:1080px;」の指定を取り消す
+        ・最大幅1080px = 1080px以上にはならない。 + 親要素(body)が縮まってきたときに1080px以下に縮まることができる。
+        ・最小幅320px = どれだけ縮まったとしても320px以下にはならない。（320pxで縮小がストップする。）*/
+
+    
+/* 見出し画像のフルードイメージ対応 */
+.mv_area_1,
+.slogan_area_1,
+.intro_area_1,
+.story_area_1,
+.productions_area_1,
+.staff_area_1,
+.modal_window{
+    max-width: 100%;
+    height: auto;
+}
+
+    /* ↑上記でやっていること
+        ・縮まってくる親（.wrap）の伸縮に合わせて画像を伸縮させる
+        　（widthではなくmax-widthを使っておくと、もとの画像サイズ以上に無理に引き伸ばされることを防げる。）
+        ・縦横比を保護するためにheightはautoにしておく。= 可変的な横幅に合わせて、縦横比が崩れないように高さを自動で合わせてくれる。*/
+
+/* 子要素画像のフルードイメージ対応 */
+.item_1 img,
+.item_2 img,
+.item_3 img,
+.item_4 img,
+.item_5 img,
+.item_6 img,
+.item_7 img,
+.item_8 img,
+.item_9 img,
+.item_10 img,
+.item_11 img,
+.item_12 img,
+.item_13 img,
+.item_14 img,
+.item_15 img,
+.cast_1 img,
+.cast_2 img,
+.cast_3 img,
+.cast_4 img,
+.cast_5 img,
+.cast_6 img,
+.cast_7 img,
+.cast_8 img,
+.cast_9 img,
+.cast_10 img,
+.staff_1 img,
+.staff_2 img,
+.staff_3 img,
+.staff_4 img,
+.director_1 img,
+.announce img,
+.x img,
+.instagram img,
+.modal_img_1,
+.modal_img_2,
+.modal_img_3,
+.modal_img_4,
+.modal_img_5,
+.modal_img_6,
+.modal_img_7,
+.modal_img_8,
+.modal_img_9,
+.modal_img_10,
+.modal_img_11,
+.modal_img_12,
+.modal_img_13,
+.modal_img_14,
+.modal_img_15
+{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------------------------
+    ハンバーガーのチェックボックスを非表示
+---------------------------*/
+.nav-switch{
+    display: none;
+}
+
+/* -----------------------------------------
+  1024px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:1024px){
+    
+    /* ページ内リンクのスムーススクロール時にヘッダーが無くなるのでその分の高さを削除 */
+    html{
+        scroll-padding-top: 0;
+    }
+
+    /* ヘッダーを固定することによる滑り込み対処用の記述を削除
+    （ヘッダーの後続の要素にこのclass名をつける） */
+    .header_br{
+        padding-top: 0;
+    }
+
+    /* ハンバーガーメニュー */
+    .nav-burger{
+        display: block;
+        width: 30px;
+        height:30px;
+        background-image: url(../images/burger.png);
+        position: fixed;
+        top:16px;
+        right:16px;
+        z-index: 2;
+    }
+
+    /* ボタンの切り替え */
+
+    .nav-switch:checked ~ .nav-burger{
+        background-image: url(../images/close.png);
+    }
+
+    /* マウスカーソルの形を変更 */
+    .nav-burger:hover{
+        cursor: pointer;
+    }
+
+    /* ナビゲーションが開いたときのスタイル */
+    .navi{
+        background-color: rgba(51, 51, 51, 0.9);
+        position: fixed;    
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-top: 115px;
+        z-index: 1;
+    }
+
+    .navi .flex li a{
+        display: block;
+        width: 100%;
+        height:100%;
+        transition: color .3s,background-color .3s;
+    }
+
+    /* ホバー時に文字色を透けた白に、
+    　　背景色は透明にする（PC用につけられていたホバースタイルをなくす） */
+    .navi .flex li a:hover{
+        color:#F2FF17;
+        background: linear-gradient(to right,rgb(127,0,255),rgb(118,33,135),rgb(54,28,97))
+    }
+
+    .navi .flex .x img{
+        margin: 10px auto;
+    }
+
+    .navi .flex .instagram img{
+        margin: 10px auto;
+    }
+
+    /* ナビゲーションの項目を縦並びにする */
+    .navi .flex{
+        flex-direction: column;
+    }
+
+    /* ナビゲーションのボタンの姿を作り変える */
+    .navi .flex li{
+        border: none;
+        border-top: 1px solid #aaa;
+        background-color: transparent;
+        width: 100%;
+        line-height: 50px;
+    }
+
+    .navi .flex li:last-child{
+        border-bottom: 1px solid #aaa;
+    }
+
+    .navi{
+        display: none;
+    }
+
+    /* ◆ inputタグにチェックが入ったら「navi」が再表示されるようにする */
+    .nav-switch:checked ~ .navi{
+        display: block;
+    }
+}
+
+/* -----------------------------------------
+  768px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:768px){
+
+    footer .copyright{
+        font-size: 14px;
+        /* background-color: aqua; */
+    }
+
+    .to-top img{
+        width: 10%;
+        height: 10%;
+    }
+
+}
+
+/* -----------------------------------------
+  500px以下の画面に向けた記述
+----------------------------------------- */
+@media screen and (max-width:500px){
+
+    /* ナビゲーションが開いたときのスタイル */
+    .navi{
+        background-color: rgba(51, 51, 51, 0.9);
+        position: fixed;    
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding-top: 50px;
+        z-index: 1;
+    }
+}
