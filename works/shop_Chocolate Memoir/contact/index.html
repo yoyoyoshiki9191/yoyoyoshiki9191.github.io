@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="墨田区・錦糸町のチョコレート専門店、ショコラメモワールのホームページです。">
+    <meta name="keywords" content="墨田区,錦糸町,チョコレート,ショコラ,ボンボン,ビターチョコレート">
+    <title>CHOCOLAT Mémoire -ショコラメモワール-</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Shippori+Mincho:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <script src="../assets/js/jquery-3.7.1.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/contact.js"></script>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+</head>
+<body>
+    <header class="bg-red">
+        <h1><a href="../index.html"><img src="../assets/images/choco_logo_white_80x42.svg" alt="CHOCOLAT Mémoire -ショコラメモワール-" width="80" height="42"></a></h1>
+        <div class="hamburgerBtn">
+            <div class="btn-trigger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="bg-red nav-area" id="nav-area">
+            <nav>
+                <ul>
+                    <li><a href="../index.html">TOP</a></li>
+                    <li><a href="../story/index.html">STORY</a></li>
+                    <li><a href="../lineup/index.html">LINEUP</a></li>
+                    <li><a href="../enjoy/index.html">ENJOY</a></li>
+                    <li><a href="../shop/index.html">SHOP</a></li>
+                    <li class="current">CONTACT</li>
+                    <li><a href="#">ONLINE SHOP</a></li>
+                </ul>
+            </nav>
+            <p class="nav-sns"><a href="#"><img src="../assets/images/Instagram_logo_White.png" alt="Instagram" width="40" height="40"></a></p>
+            <p class="nav-sns"><a href="https://twitter.com/ChocolatMemoire?ref_src=twsrc%5Etfw" target="_blank"><img src="../assets/images/x_logo-white.png" alt="X" width="40" height="40"></a></p>
+        </div>
+        <div id="navBgGray"></div>
+    </header>
+    <div class="left-margin">
+        <div>
+            <h2 class="heading2">
+                CONTACT
+            </h2>
+        </div>
+        <main class="inner1">
+            <section>
+                <h3 class="shippori-mincho-semibold">お問い合わせ</h3>
+                <div class="bg-black shop-contact">
+                    <p>
+                        実店舗に関するお問い合わせはお電話にてご連絡ください。<br>
+                        営業時間　10:30～21:00
+                    </p>
+                    <p class="tel-number"><img src="../assets/images/choco_contact_icon_tel_256x256.png" alt="電話番号" width="30" height="30">03-XXXX-XXXX</p>
+                </div>
+                <section class="faq-area">
+                    <h4 class="shippori-mincho-semibold bg-black faqBtn" >
+                        よくあるご質問
+                    </h4>
+                    <dl>
+                        <div>
+                            <dt>
+                                どのような支払方法がありますか？
+                            </dt>
+                            <dd>
+                                クレジットカード払い・shopify payments・Amazon Pay・コンビニ前払い・代金引換（現金払い・お届け時クレジットカード払い）がご利用いただけます。
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>
+                                商品はいつ届きますか？
+                            </dt>
+                            <dd>
+                                配送先によって異なりますが、通常ご注文後から3～5営業日以内のお届けとなります。
+                            </dd>
+                        </div>
+                        <div>
+                            <dt>
+                                注文をキャンセル・返品・交換したいのですが、できますか？
+                            </dt>
+                            <dd>
+                                ご注文完了後のお客様都合によるキャンセル・返品・交換は、原則的にお受けできません。 予めご了承ください。
+                            </dd>
+                        </div>
+                    </dl>
+                </section>
+                <p class="text">
+                    ※お問い合わせの前に一度、よくあるご質問をご確認いただければ幸いです。同じようなご質問が掲載されている可能性があります。<br>
+                    解決しない場合は、こちらのフォーマットよりお問い合わせ願います。
+                </p>
+                <ol class="form-progress">
+                    <li>必要事項の入力</li>
+                    <li>入力内容の確認</li>
+                    <li>送信完了</li>
+                </ol>
+                <form action="program.php" method="post">
+                    <dl>
+                        <div class="formItem nameSec">
+                            <dt><label for="name">お名前<span>*</span></label></dt>
+                            <dd>
+                                <input type="text" name="name" id="name">
+                                <p class="alert">必須項目が未入力です。</p>
+                            </dd>
+                        </div>
+                        <div class="formItem companyNameSec">
+                            <dt><label for="companyName">会社名</label></dt>
+                            <dd>
+                                <input type="text" name="companyName" id="companyName">
+                            </dd>
+                        </div>
+                        <div class="formItem telSec">
+                            <dt><label for="tel">電話番号<span>*</span></label></dt>
+                            <dd>
+                                <input type="tel" name="tel" id="tel"  pattern="\d{2,4}-?\d{2,4}-?\d{3,4}">
+                                <p class="alert">必須項目が未入力です。</p>
+                            </dd>
+                        </div>
+                        <div class="formItem emailSec">
+                            <dt><label for="email">メールアドレス<span>*</span></label></dt>
+                            <dd>
+                                <input type="email" name="email" id="email">
+                                <p class="alert">必須項目が未入力です。</p>
+                            </dd>
+                        </div>
+                        <div class="formItem messageSec">
+                            <dt><label for="message">お問い合わせ内容<span>*</span></label></dt>
+                            <dd>
+                                <textarea name="message" id="message"></textarea>
+                                <p class="alert">必須項目が未入力です。</p>
+                            </dd>
+                        </div>
+                    </dl>
+                    <p><span>*</span>印は必須項目です。</p>
+                    <button id="submit-btn" type="submit" value="入力内容の確認">入力内容の確認</button>
+                </form>
+            </section>         
+        </main>
+        <footer class="bg-black flex">
+            <address>
+                <p>株式会社ショコラメモワール</p>
+                <p>〒130-0013 東京都墨田区錦糸２丁目９-１５</p>
+                <p>TEL 03-XXXX-XXXX</p>
+            </address>
+            <p>
+                <small>&copy;2024 chocolat mémoire Co., Ltd</small>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
