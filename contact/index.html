@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ページ情報 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="千葉県を拠点に活動するWebデザイナー">
+<title>CONTACT｜YOSHIKI OFFICIAL WEBSITE</title>
+
+<!-- faviconの読み込み -->
+<link rel="shortcut icon" href="../assets/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+<!-- cssの読み込み -->
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/slick.css">
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/contact.css">
+
+<!-- web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- jQueryの読み込み -->
+<script src="../assets/js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+<!-- キラキラ -->
+<div id="particles-js"></div>
+<div id="wrapper">
+    <div class="left">
+        <div class="left-wrap">
+            <div class="left-inner">
+                <h1>
+                    <a href="../index.html">
+                        <img src="../assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-wrap">
+            <div class="right-inner">
+                <nav>
+                    <ul>
+                        <li><a href="../news/index.html">NEWS</a></li>
+                        <li><a href="../biography/index.html">BIOGRAPHY</a></li>
+                        <li><a href="../works/index.html">WORKS</a></li>
+                        <li><a href="../gallery/index.html">GALLERY</a></li>
+                        <li><a href="#">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="sns">
+                    <ul>
+                        <li><a href="#"><img src="../assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                        <li><a href="#"><img src="../assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                        <li><a href="#"><img src="../assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                        <li><a href="#"><img src="../assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <header>
+            <!-- ハンバーガーメニュー用ここから -->
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">          
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <div class="sp_nav">
+                    <div class="sp_nav-inner">
+                        <h1>
+                            <a href="../index.html">
+                                <img src="../assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                            </a>
+                        </h1>
+                        <nav>
+                            <ul id="hamburger_close">
+                                <li><a href="../news/index.html">NEWS</a></li>
+                                <li><a href="../biography/index.html">BIOGRAPHY</a></li>
+                                <li><a href="../works/index.html">WORKS</a></li>
+                                <li><a href="../gallery/index.html">GALLERY</a></li>
+                                <li><a href="#">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="#"><img src="../assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                                <li><a href="#"><img src="../assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                                <li><a href="#"><img src="../assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                                <li><a href="#"><img src="../assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <!-- ハンバーガーメニュー用ここまで -->
+        </header>
+
+        <main>
+            <div class="container">
+                <h2>CONTACT</h2>
+                <div class="contact-text">
+                    <label><input type="radio" name="contact-text" checked>
+                        <h3>お問い合わせ</h3>
+                        <h4>for business</h4>
+                    </label>
+                    <div class="form">                        
+                        <form action="form.php" method="post">
+                            <div id="textSection">
+                            <p>
+                                <label for="text">氏名</label>
+                                <span class="alert-after">必須</span>
+                                <span class="alert">※必須</span>
+                            </p>
+                            <input type="text" id="text" name="text" value="">
+                            </div>
+                            <div id="textSection">
+                                <p><label for="text">企業名</label></p>
+                                <input type="text" id="text" name="text" value="">
+                            </div>
+                            <div id="textSection">
+                                <p>
+                                    <label for="text">メールアドレス</label>
+                                    <span class="alert-after">必須</span>
+                                    <span class="alert">※必須</span>
+                                </p>
+                                <input type="text" id="text" name="text" value="">
+                            </div>
+                            <div id="textareaSection">
+                                <p>
+                                    <label for="textarea">ご用件</label>
+                                    <span class="alert-after">必須</span>
+                                    <span class="alert">※必須</span>
+                                </p>
+                                <textarea id="textarea" name="textarea"></textarea>
+                            </div>
+                            <input type="submit" value="送信" id="submitBtn">
+                        </form>
+                        <p><span>【注意事項】</span></p>
+                        <p><span>・お問い合わせいただいた内容は、３日以内にご連絡させていただきます。</span></p>
+                        <p><span>・上記期間内に返信がない場合は、送信トラブルの可能性がございます。お手数おかけしますが、再度お問い合わせいただけますと幸いです。</span></p>
+                        <p><span>・お電話でのお問い合わせは受付しておりません。ご了承いただけますよう、お願い申し上げます。</span></p>
+                    </div>
+                    <!-- for fans -->
+                    <label><input type="radio" name="contact-text">
+                        <h3>ファンのみなさま</h3>
+                        <h4>for fans</h4>
+                    </label>
+                    <div class="for-fans">
+                        <h3>作品の依頼はこちら</h3>
+                        <span>※現在はリクエストを停止中です。</span>
+                        <div class="view-more"><a href="https://skeb.jp/" target="_blank"><span>Skeb</span></a></div>
+                        <h3>BOOTH通販はこちら</h3>
+                        <div class="view-more"><a href="https://booth.pm/users/sign_in" target="_blank"><span>BOOTH</span></a></div>
+                        <h3>Youtubeアカウントはこちら</h3>
+                        <p>※人を不快にさせるコメント(批判・暴言等)はお控えください。</span></p>
+                        <span>※No offensive language or fighting in the comments!</span>
+                        <div class="view-more"><a href="https://www.youtube.com/" target="_blank"><span>Youtube</span></a></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="sns">
+                <ul>
+                    <li><a href="https://x.com/?lang=ja"><img src="../assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="../assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="../assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="../assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <p><small>&copy;2025 Yoshiki Wada All rights reserved.</small></p>
+        </footer>
+    </div>
+</div>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
+cookie.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="../assets/js/slick.min.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/slick_script.js"></script>
+<!-- js -->
+</body>
+</html>
