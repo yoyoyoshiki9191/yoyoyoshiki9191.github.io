@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ページ情報 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="千葉県を拠点に活動するWebデザイナー">
+<title>WORKS｜YOSHIKI OFFICIAL WEBSITE</title>
+
+<!-- faviconの読み込み -->
+<link rel="shortcut icon" href="../assets/favicon.ico">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+
+<!-- cssの読み込み -->
+<link rel="stylesheet" href="../assets/css/reset.css">
+<link rel="stylesheet" href="../assets/css/slick.css">
+<link rel="stylesheet" href="../assets/css/slick-theme.css">
+<link rel="stylesheet" href="../assets/js/fancybox/jquery.fancybox.min.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/works.css">
+
+<!-- web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- jQueryの読み込み -->
+<script src="../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../assets/js/fancybox/jquery.fancybox.min.js"></script>
+</head>
+
+<body>
+<!-- キラキラ -->
+<div id="particles-js"></div>
+<div id="wrapper">
+    <div class="left">
+        <div class="left-wrap">
+            <div class="left-inner">
+                <h1>
+                    <a href="../index.html">
+                        <img src="../assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-wrap">
+            <div class="right-inner">
+                <nav>
+                    <ul>
+                        <li><a href="../news/index.html">NEWS</a></li>
+                        <li><a href="../biography/index.html">BIOGRAPHY</a></li>
+                        <li><a href="#">WORKS</a></li>
+                        <li><a href="../gallery/index.html">GALLERY</a></li>
+                        <li><a href="../contact/index.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="sns">
+                    <ul>
+                        <li><a href="https://x.com/?lang=ja"><img src="../assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                        <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="../assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                        <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="../assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                        <li><a href="https://www.youtube.com/"><img src="../assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <header>
+            <!-- ハンバーガーメニュー用ここから -->
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">          
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <div class="sp_nav">
+                    <div class="sp_nav-inner">
+                        <h1>
+                            <a href="../index.html">
+                                <img src="../assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                            </a>
+                        </h1>
+                        <nav>
+                            <ul id="hamburger_close">
+                                <li><a href="../news/index.html">NEWS</a></li>
+                                <li><a href="../biography/index.html">BIOGRAPHY</a></li>
+                                <li><a href="#">WORKS</a></li>
+                                <li><a href="../gallery/index.html">GALLERY</a></li>
+                                <li><a href="../contact/index.html">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="https://x.com/?lang=ja"><img src="../assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                                <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="../assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                                <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="../assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                                <li><a href="https://www.youtube.com/"><img src="../assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <!-- ハンバーガーメニュー用ここまで -->
+        </header>
+
+        <main>
+            <div class="container">
+                <h2>WORKS</h2>
+                <ul class="works_buttons">
+                    <li class="works_current"><button value="all">ALL</button></li>
+                    <li><button value="website">WEBSITE</button></li>
+                    <li><button value="banner">BANNER</button></li>
+                    <li><button value="logo">LOGO</button></li>
+                </ul>
+                <ul id="list">
+                    <li class="website all">
+                        <a data-caption="2023.10.31 架空の映画サイトを作成。" data-fancybox="gallery" data-type="iframe"  data-src="movie_Hell's Runway/index.html" href="javascript:;"><img src="../assets/img/common/website_01.png" alt="ウェブサイト">
+                            <div class="works_hover">
+                                <p>
+                                    2023.10.31
+                                    <span>Website</span>
+                                    <span>Movie/Hell's Runway</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="website all">
+                        <a data-caption="2023.10.31 架空のチョコレートブランドショップを作成。" data-fancybox="gallery"  data-type="iframe"  data-src="shop_Chocolate Memoir/index.html" href="javascript:;"><img src="../assets/img/common/website_02.png" alt="ウェブサイト">
+                            <div class="works_hover">
+                                <p>
+                                    2023.10.16
+                                    <span>Website</span>
+                                    <span>Shop/Chocolate Memoir</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="website all">
+                        <a data-caption="2023.10.31 架空の病院サイトを作成。" data-fancybox="gallery"  data-type="iframe"  data-src="hospital/index.html" href="javascript:;"><img src="../assets/img/common/website_03.png" alt="ウェブサイト">
+                            <div class="works_hover">
+                                <p>
+                                    2023.8.1
+                                    <span>Website</span>
+                                    <span>Hospital</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="banner all">
+                        <a data-caption="2023.10.31 架空のアクセサリーショップのバナーを作成。" data-fancybox="gallery" href="../assets/img/common/banner_01.png"><img src="../assets/img/common/banner_01.png" alt="バナー">
+                            <div class="works_hover">
+                                <p>
+                                    2023.8.1
+                                    <span>Banner</span>
+                                    <span>Accessories</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="banner all">
+                        <a data-caption="2023.10.31 架空の音楽教室のバナーを作成。" data-fancybox="gallery" href="../assets/img/common/banner_02.png"><img src="../assets/img/common/banner_02.png" alt="バナー">
+                            <div class="works_hover">
+                                <p>
+                                    2023.5.23
+                                    <span>Banner</span>
+                                    <span>music lesson</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="logo all">
+                        <a data-caption="2023.10.31 架空のチョコレートブランドショップのロゴを作成。" data-fancybox="gallery" href="../assets/img/common/logo_chocolate.svg"><img src="../assets/img/common/logo_chocolate.svg" alt="ロゴ">
+                            <div class="works_hover">
+                                <p>
+                                    2023.2.14
+                                    <span>Logo</span>
+                                    <span>Shop/Chocolate Memoir</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="logo all">
+                        <a data-caption="2023.10.31 架空のレストランのロゴを作成。" data-fancybox="gallery" href="../assets/img/common/logo_cafebar.svg"><img src="../assets/img/common/logo_cafebar.svg" alt="ロゴ">
+                            <div class="works_hover">
+                                <p>
+                                    2022.10.9
+                                    <span>Logo</span>
+                                    <span>Restaurant/Cafe & Bar Pomme</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="logo all">
+                        <a data-caption="2023.10.31 架空のレンタル映画館のロゴを作成。" data-fancybox="gallery" href="../assets/img/common/logo_cinema.svg"><img src="../assets/img/common/logo_cinema.svg" alt="ロゴ">
+                            <div class="works_hover">
+                                <p>
+                                    2022.10.9
+                                    <span>Logo</span>
+                                    <span>Cinema/Rental movie Theater</span>
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <div class="sns">
+                <ul>
+                    <li><a href="https://x.com/?lang=ja"><img src="../assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="../assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="../assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="../assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <p><small>&copy;2025 Yoshiki Wada All rights reserved.</small></p>
+        </footer>
+    </div>
+</div>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
+cookie.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="../assets/js/slick.min.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/slick_script.js"></script>
+<!-- js -->
+</body>
+</html>
