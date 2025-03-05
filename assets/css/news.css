@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.news_buttons{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	font-size: 2.0rem;
+	font-family:'myfont_02',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	margin-bottom: 2rem;
+}
+
+.news_buttons li{
+	margin: 0 1rem 0;
+}
+
+.news_current{
+	color: #ffd768;
+}
+
+.news_buttons button:hover{
+	opacity: 0.8;
+}
+
+.news-container{
+	margin: 0 auto;
+	width: 90%;
+}
+
+.all{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1rem auto;
+	line-height: 2rem;
+	padding: 1rem;
+    background: #243949;
+}
+
+.all:hover{
+	opacity: .8;
+}
+
+.all dt{
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+}
+
+.all dt:last-of-type{
+	margin-left: 1rem;
+}
+
+.all dd{
+	width: 100%;
+	text-align: left;
+	text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.pagination{
+	display: flex;
+	justify-content: space-around;
+}
+
+.pagination a{
+	font-size:1.2rem;
+	letter-spacing: normal;
+	margin: auto;
+}

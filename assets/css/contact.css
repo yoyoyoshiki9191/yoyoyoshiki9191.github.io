@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+/* タブ */
+.contact-text {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 40vw;
+}
+
+.contact-text > label {
+    flex: 1 1;
+    order: -1;
+    position: relative;
+    min-width: 70px;
+    padding: .7em 1em;
+    color: #fff;
+	font-weight: 600;
+    font-size: .9em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contact-text > label:hover{
+    opacity: .8;
+}
+
+.contact-text label:has(:checked) {
+    background-color: #ff00ff;
+    color: #fff;
+}
+
+.contact-text label:has(:checked)::before {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 9px;
+    background-color: #ff00ff;
+    content: '';
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.contact-text input {
+    display: none;
+}
+
+.contact-text > div {
+    display: none;
+    width: 100%;
+    padding: 1.5em 1em;
+}
+
+.contact-text label:has(:checked) + div {
+    display: block;
+}
+
+/* for business-form */
+.form input {
+    display:block;
+    text-align:center;
+}
+
+.form span:first-child{
+    display: inline-block;
+}
+
+.form div{
+    margin-bottom: 2em;
+}
+
+.form p{
+    text-align:left;
+    margin: auto;
+}
+
+.alert-after{
+	font-size:0.9em;
+	font-weight:bold;
+}
+
+p.alert,span.alert{
+	font-size:1em;
+	font-weight:bold;
+	color:#ffd768;
+}
+
+input[type="text"]{
+    display: inline-block;
+}
+
+input[type="text"],textarea{
+    text-align: left;
+	padding:5px;
+	color:#1a150a;
+	border:2px solid #fff;
+    border-radius: 15px;
+    width:100%;
+    background: #fff;
+}
+
+textarea{
+    height: 5em;
+}
+
+#submitBtn{
+    border-radius:30px;
+	display:block;
+	margin:0 auto;
+	font-size:1.4em;
+	padding:10px 25px;
+    font-family:'Tsukimi Rounded',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	font-weight:bold;
+    width:calc(380px / 2 - 2em);
+    color:#fff;
+	background:#ff00ff;
+	border:0
+}
+
+#submitBtn:focus:focus{
+	outline:none;
+}
+
+#submitBtn:hover{
+    opacity: .8;
+}
+
+/* for fans */
+.for-fans h3{
+	font-size: 1.5em;
+	padding-bottom: 0.2em;
+}
+
+@media screen and (max-width:768px){
+
+	/* 幅調整 */
+	.contact-text {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+    input[type="text"],textarea{
+        width:90%;
+    }
+
+}

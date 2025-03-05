@@ -1,0 +1,405 @@
+@charset "utf-8";
+
+@font-face{
+    font-family: "myfont_01";
+    src: url("fonts/Ailerons-Typeface.otf") format("truetype");
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "myfont_02";
+    src: url("fonts/MADE\ Evolve\ Sans\ Medium\ EVO\ \(PERSONAL\ USE\).otf") format("truetype");
+    font-display: swap;
+}
+
+body{
+	font-family: YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+}
+
+/* モーダルウィンドウ時、スクロール無効 */
+body.no_scroll{
+    overflow: hidden;
+}
+
+a:hover{
+	opacity: .8;
+}
+
+/* ページ内リンクのスムーススクロール */
+html{
+    scroll-behavior: smooth;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+#wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align:center;
+	color: #fff;
+}
+a{
+	color: #fff;
+}
+
+/*========= particle js===============*/
+
+html,body{
+	height: 100%;/*高さを100%にして描画エリアをとる*/
+}
+
+#particles-js{ 
+	position:fixed;/*描画固定*/
+	z-index:1;/*描画を一番下に*/
+	width: 100%;
+	height: 100vh;
+	/* background: url(../img/top/mv/clouds-2517653_1920.jpg)
+	center / cover; */
+	background: linear-gradient(to bottom,#000 ,#131313)
+}
+
+#wrapper{
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	min-height: 100vh;
+	/* background-color: rgba(26,21,10,0.3); */
+}
+
+/* left */
+.left{
+	position: fixed;
+	top:0;
+	left:0;
+	width:calc((100% - 40vw)/2);
+	min-height: 100vh;
+	z-index: 98;
+}
+
+.left-wrap{
+	position: relative;
+	height: 100vh;
+}
+
+.left-inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+h1 img{
+	height: 20vh;
+}
+
+/* right */
+.right{
+	position: fixed;
+	top:0;
+	right:0;
+	width:calc((100% - 40vw)/2);
+	min-height: 100vh;
+	z-index: 99;
+}
+
+.right-wrap{
+	position: relative;
+	height: 100vh;
+}
+
+.right-inner{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+/* nav */
+nav{
+	margin: 1rem auto;
+}
+
+nav a{
+	display: block;
+	font-family:'myfont_01',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	font-size: clamp(2.25rem, 1.977rem + 1.36vw, 3rem);
+	letter-spacing: 0.1rem;
+	margin: 0.5rem auto;
+}
+
+/* current */
+.current a{
+	color: #ffd768;
+}
+
+.current a:hover{
+	opacity: 1;
+}
+
+/* sns */
+.sns ul{
+	display: flex;
+	justify-content:center;
+	margin-bottom: 1rem;
+}
+
+.sns li{
+	margin: 0 11px 0;
+}
+
+.sns li img{
+	height: 22px;
+}
+
+/* content */
+header{
+	display: none;
+}
+
+.content{
+	margin: 0 auto;
+	width: 40vw;
+	/* rgba指定で背景色を透過 */
+	background:rgba(0,0,0,0.6);
+	min-height: 100vh;
+	z-index: 100;
+}
+
+/* mv */
+.sp_logo{
+	display: none;
+}
+
+.mv{
+	margin: 0 auto 5rem;
+	height: 100vh;
+	position: relative;
+}
+
+.slick-img img {
+	height: 100vh;
+	margin: auto;
+	max-height: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+/* content共通 */
+/* 余白 */
+.news-container,.about-container,.works-container,.gallery-container,.contact-container,.container{
+	margin-bottom: 3rem;
+}
+
+/* 見出し */
+.content h2{
+	text-align: left;
+	font-size: clamp(2.25rem, 1.614rem + 3.18vw, 4rem);
+	font-family:'myfont_01',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	margin:0 auto 1.5rem 1rem;
+	letter-spacing: 0.5rem;
+}
+
+.container h2{
+	padding-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.content p{
+	line-height: 2rem;
+	max-width: 38vw;
+	margin: 0 1rem;
+}
+
+/* テキスト部分 */
+.news-text,.about-text,.works-text,.gallery-text,.contact-text{
+	text-align: center;
+}
+
+/* view-moreボタン */
+.view-more{
+	text-align: center;
+	margin: 2rem auto;
+}
+
+.view-more a{
+	display: inline-block;
+	border: 1px solid #ff00ff;
+	border-radius: 15px;
+	background: #ff00ff;
+	color: #fff;
+	padding: 0.5rem;
+	width: 12rem;
+	letter-spacing: 0.1rem;
+	font-family:'myfont_02',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	font-weight: bold;
+}
+
+.pagetop{
+	position: relative;
+	height: 48px;
+	z-index: 100;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.pagetop img {
+	position: absolute;
+	transition: all ease .4s;
+}
+
+.pagetop .on {
+	position: absolute;
+	opacity: 0;
+}
+
+.pagetop:hover img {
+	opacity: 0;
+	transition: all ease .4s;
+}
+
+.pagetop a:hover {
+	opacity: 1;
+}
+
+.pagetop:hover img.on {
+	opacity: 1;
+	transition: all ease .4s;
+}
+
+@media screen and (max-width:768px) {
+	/* いろいろ非表示 */
+	.left,.right{
+		display:none;
+	}
+
+	/* ページタイトル */
+	.sp_logo{
+		display: block;
+		position: absolute;
+		top: 70%;
+		left:50%;
+		transform: translateY(-50%) translateX(-50%);
+		z-index: 997;
+	}
+
+	.sp_logo img{
+		height: 30vh;
+		filter: drop-shadow(.1px .1px 1px rgba(26,21,10,0.5));
+	}
+
+	/* 幅調整 */
+	.content{
+		width: 100%;
+	}
+
+	.content p{
+		max-width: 100%;
+	}
+
+	/* ハンバーガーメニュー */
+	header{
+		display: block;
+		position: fixed;
+		z-index: 998;
+	}
+
+	/* チェックボックスを非表示にする */
+	.drawer_hidden {
+		display: none;
+	}
+
+	/* ハンバーガーアイコンの設置スペース */
+	.drawer_open {
+		display: flex;
+		height: 60px;
+		width: 60px;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		right: 0;
+		z-index: 1000;/* 重なり順を一番上にする */
+		cursor: pointer;
+	}
+
+	/* ハンバーガーメニューのアイコン */
+	.drawer_open span,
+	.drawer_open span:before,
+	.drawer_open span:after {
+		content: '';
+		display: block;
+		height: 3px;
+		width: 25px;
+		border-radius: 3px;
+		background: #ff00ff;
+		transition: 0.5s;
+		position: absolute;
+	}
+
+	/* 三本線の一番上の棒の位置調整 */
+	.drawer_open span:before {
+		bottom: 8px;
+	}
+
+	/* 三本線の一番下の棒の位置調整 */
+	.drawer_open span:after {
+		top: 8px;
+	}
+
+	/* アイコンがクリックされたら真ん中の線を透明にする */
+	#drawer_input:checked ~ .drawer_open span {
+		background:transparent;
+	}
+
+	/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+	#drawer_input:checked ~ .drawer_open span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+
+	#drawer_input:checked ~ .drawer_open span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	/* メニューのデザイン*/
+	.sp_nav{
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: -300%;
+		z-index: 999;
+		transition: .5s;
+		background: url(../img/common/nav_back.jpg)center / cover;
+	}
+
+	/* メニュー位置調整 */
+	.sp_nav-inner{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translateY(-50%) translateX(-50%);
+	}
+
+	/* nav文字サイズ */
+	h1 img{
+		height: 30vw;
+		margin-bottom: 10px;
+	}
+
+	/* nav a{
+		font-size:clamp(2.25rem, 1.977rem + 1.36vw, 3rem);
+	} */
+
+	/* アイコンがクリックされたらメニューを表示 */
+	#drawer_input:checked ~ .sp_nav {
+		top: 0;/* メニューを画面に入れる */
+	}
+
+	.content h2{
+		font-size: 3.5rem;
+	}
+
+}

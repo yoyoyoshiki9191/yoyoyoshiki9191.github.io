@@ -1,0 +1,314 @@
+@charset "utf-8";
+
+.container h2{
+	letter-spacing: 0.1em;
+}
+
+.gallery_buttons{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	font-size: 2.0em;
+	font-family:'myfont_02',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	margin-bottom: 2em;
+}
+
+.gallery_current{
+	color: #ffd768;
+}
+
+.gallery_buttons button:hover{
+	opacity: 0.8;
+}
+
+#list img{
+	width: 300px;
+	height: 300px;
+	object-fit: cover; /* width, heightといっしょに使います */
+	max-width: 300px;
+}
+
+#list{
+	display: flex;
+	justify-content:center;
+	flex-wrap: wrap;
+}
+
+#list li{
+	margin: 0.5em;
+	position: relative;
+	border: solid 2px #333;
+}
+
+/* #list a{
+    display: block;
+} */
+
+#list a img{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+#list a:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.gallery_hover{
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color:rgba(26,21,10,0.3) ;
+	text-align: center;
+}
+
+.gallery_hover p{
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 100%;
+	max-width:100%;
+	margin: 0 auto;
+	transform: translate(-50%, -50%);
+	font-weight: bold;
+}
+
+.gallery_hover span{
+	display:block;
+}
+
+#list li:hover .gallery_hover{
+	display: block;
+}
+
+.gallery_hover span:nth-child(2){
+	color:#ffd768;
+	font-size: 1.8rem;
+	cursor: pointer;
+	transition:.1s
+}
+
+.gallery_hover span:hover:nth-child(2){
+	animation: wiggle 0.2s 2;
+	text-shadow: 6px 6px rgba(246, 0, 153, 0.8),
+	-6px -6px rgb(94, 255, 0);
+}
+
+/* グリッチエフェクト（HOVER） */
+/* <label for="switch" class="button">
+<a href="#">0000</a>
+</label> */
+
+#list .glitch {
+	-moz-transition: opacity 300ms;
+	-o-transition: opacity 300ms;
+	-webkit-transition: opacity 300ms;
+	transition: opacity 300ms;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 99;
+}
+
+.glitch:hover {
+	animation: glitch 750ms infinite;
+}
+
+@keyframes glitch {
+	0% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+	}
+
+	5% {
+		-moz-transform: skewX(2deg);
+		-ms-transform: skewX(2deg);
+		-webkit-transform: skewX(2deg);
+		transform: skewX(2deg);
+		opacity: 0.75;
+	}
+
+	10% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+		opacity: 1;
+	}
+
+	15% {
+		-moz-transform: skewX(-5deg);
+		-ms-transform: skewX(-5deg);
+		-webkit-transform: skewX(-5deg);
+		transform: skewX(-5deg);
+		opacity: 0.75;
+	}
+
+	20% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+		opacity: 1;
+	}
+
+	45% {
+		-moz-transform: skewX(3deg);
+		-ms-transform: skewX(3deg);
+		-webkit-transform: skewX(3deg);
+		transform: skewX(3deg);
+		opacity: 0.75;
+	}
+
+	50% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+		opacity: 1;
+	}
+
+	55% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+		opacity: 0.75;
+	}
+
+	60% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+		opacity: 1;
+	}
+
+	75% {
+		-moz-transform: skewX(2deg);
+		-ms-transform: skewX(2deg);
+		-webkit-transform: skewX(2deg);
+		transform: skewX(2deg);
+	}
+
+	80% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+	}
+
+	85% {
+		-moz-transform: skewX(-8deg);
+		-ms-transform: skewX(-8deg);
+		-webkit-transform: skewX(-8deg);
+		transform: skewX(-8deg);
+		opacity: 0.75;
+	}
+
+	90% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+		opacity: 1;
+	}
+
+	100% {
+		-moz-transform: skewX(0deg);
+		-ms-transform: skewX(0deg);
+		-webkit-transform: skewX(0deg);
+		transform: skewX(0deg);
+	}
+}
+
+/* モーダルウィンドウ */
+/* .modal_window{
+	position: relative;
+    display: none;
+    position: fixed;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(12,101,153),rgb(0,0,0));
+    z-index: 102;
+} */
+
+/* オーバーレイ */
+/* #overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+}
+
+.modal_img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.modal_text{
+	padding: 15px 0;
+	text-align: center;
+	line-height: 1.4rem;
+} */
+
+/* 子要素画像のフルードイメージ対応 */
+/* .modal_img_1,
+.modal_img_2,
+.modal_img_3
+{
+	width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+
+.modal_img_4,
+.modal_img_5,
+.modal_img_6,
+.modal_img_7,
+.modal_img_8
+{
+	width: 1000px;
+    max-width: 100%;
+    height: auto;
+} */
+
+
+@media screen and (max-width:768px){
+
+	#list img{
+		width: 200px;
+		height: 200px;
+		object-fit: cover; /* width, heightといっしょに使います */
+		max-width: 200px;
+	}
+
+	.gallery_hover p{
+		margin: 0 auto;
+		line-height: 1rem;
+		font-size: 0.9rem;
+		width: 150px;
+	}
+
+	.gallery_hover span:nth-child(2){
+		font-size: 1.0em;
+	}
+	
+}

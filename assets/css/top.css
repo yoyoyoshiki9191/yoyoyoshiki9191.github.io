@@ -1,0 +1,431 @@
+@charset "utf-8";
+
+/*========= splash js===============*/
+/* Loading背景画面設定　*/
+#splash {
+/*fixedで全面に固定*/
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1001;
+	background:#fff;
+	text-align:center;
+	visibility: visible;
+}
+
+#splash.is-active {
+	opacity: 0;
+	visibility: hidden;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility: hidden;
+}
+
+#splash_logo.is-active {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+	display: block;
+	width:300px;
+	margin-bottom: 2rem;
+}
+
+/* アニメーションスタートの遅延時間を決めるCSS*/
+.delay1{
+animation-delay: 0.2s;
+}
+.delay2{
+animation-delay: 0.4s;
+}
+
+/* fadeUpをするアイコンの動き */
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+	from {
+	opacity: 0;
+	transform: translateY(100px);
+	}
+
+	to {
+	opacity: 1;
+	transform: translateY(0);
+	}
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+
+/*画面遷移アニメーション*/
+
+body{
+    background:#fff;/*遷移アニメーションと同じ色を指定*/
+}
+
+body.appear{
+    background:#131313;/*画面を開いた後の背景色を指定*/
+}
+
+.splashbg{
+    display: none;
+	content: "";
+	position:fixed;
+	transform: scale(100);
+	background-color: #fff;/*伸びる背景色の設定*/
+	z-index: 999;
+    /*丸のスタートの形状*/
+    top:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+    left:calc(50% - 1rem);/*50%から円の半径を引いた値*/
+	width: 2rem;
+	height: 2rem;
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg{
+    display: block;
+    border-radius: 50%;	
+	animation-name:PageAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes PageAnime{
+	0% {/*丸のスタート位置と形状*/
+		transform: scale(100);
+	
+	}
+	100% {/*丸の終了位置と形状*/
+		transform: scale(0);
+		display: none;/*終了時は消える*/
+	}
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#wrapper,#particles-js{
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #wrapper,body.appear #particles-js{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay: 0.8s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+
+/* left */
+.left-mv{
+	display: none;
+	position: static;
+}
+
+.fadeDown{
+	display:block;
+	animation-name:fadeDownAnime;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
+	opacity:0;
+}
+	
+@keyframes fadeDownAnime{
+	from {
+	opacity: 0;
+	transform: translateY(-100px);
+	}
+
+	to {
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 2s ease;
+	}
+}
+
+.fadeOut{
+	display:block;
+	animation-name:fadeOut;
+	animation-duration:2s;
+	animation-fill-mode:forwards;
+	opacity:0;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+}
+
+/* scroll */
+/*スクロールダウン全体の場所*/
+.scrolldown4{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	bottom:1%;
+	right:50%;
+    /*矢印の動き1秒かけて永遠にループ*/
+	animation: arrowmove 1s ease-in-out infinite;
+}
+
+/*下からの距離が変化して全体が下→上→下に動く*/
+@keyframes arrowmove{
+	0%{bottom:1%;}
+    50%{bottom:3%;}
+    100%{bottom:1%;}
+}
+
+/*Scrollテキストの描写*/
+.scrolldown4 span{
+    /*描画位置*/
+	position: absolute;
+	left:-20px;
+	bottom:10px;
+    /*テキストの形状*/
+	color: #ff00ff;
+	font-size: 1rem;
+	font-family:'Tsukimi Rounded',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	letter-spacing: 0.05rem;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom: 0;
+    right: -6px;
+    /*矢印の形状*/
+    width: 1px;
+    height: 20px;
+    background: #ff00ff;
+    transform: skewX(-31deg);
+}
+
+.scrolldown4:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:0;
+	right:0;
+    /*矢印の形状*/
+	width:1px;
+	height: 50px;
+	background:#ff00ff;
+}
+
+/* .scrolldown{
+    width: 60px;
+    height: 72px;
+	position:absolute;
+	bottom:1%;
+	right:46%;
+}
+
+.scrolldown path{
+    stroke: #ff00ff;
+    fill: transparent;
+    stroke-width: 3px;
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+@-webkit-keyframes arrow
+{
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
+}
+
+.scrolldown path.a1{
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s;
+}
+
+.scrolldown path.a2{
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s;
+}
+
+.scrolldown path.a3{ 
+    animation-delay:0s;
+    -webkit-animation-delay:0s;
+} */
+
+/* news-slider */
+/*　キラッ　*/
+.shine span.mask{
+	position: relative;/*キラッの基点となる位置を定義*/
+    display: block;
+    line-height: 0;/*行の高さを0にする*/
+    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+}
+
+.shine span.mask::before {
+	position: absolute;
+	content:"";
+	width: 50%;/*キラッの横幅*/
+	height: 100%;/*キラッの縦幅*/
+	top: 0;/*.shine span.maskのトップ0を基点*/
+	left: -75%;/*画面の見えていない左から右へ移動するスタート地点*/
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-25deg);/*背景白透過を斜めに*/
+	animation: shine 2.7s  ease-in-out infinite;
+}
+
+@keyframes shine {
+	100% {
+		left: 125%;/*画面の見えていない左から右へ移動する終了地点*/
+	}
+}
+
+.news-slider img {
+	margin: auto;
+	max-width:15vw;
+	width: 100%;
+	max-height:15vw;
+}
+
+/* news */
+.news-text{
+    width: 38vw;
+    margin:0 auto 1rem;
+	padding: 1rem;
+    background: #243949;
+}
+
+.news-text ul{
+	display: flex;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
+}
+
+.news-text li:last-of-type{
+	margin-left: 1rem;
+}
+
+.news-text p{
+	text-align: justify;
+	margin: auto;
+}
+
+/* about mak */
+.about-img img{
+	width:100%;
+	max-width: 20vw;
+	margin-bottom: 0.5rem;
+}
+
+.about-text h3{
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+.about-text span{
+	font-weight: bold;
+	display: block;
+	margin-bottom: 1rem;
+}
+
+.about-text p{
+	text-align: justify;
+}
+
+/* works */
+.works-img img{
+	width:100%;
+	max-width: 38vw;
+	margin-bottom: 1rem;
+}
+
+/* gallery */
+.gallery-img img{
+	width:100%;
+	max-width: 38vw;
+	margin-bottom: 1rem;
+}
+
+/* contact */
+.contact-text .view-more{
+	margin:0 auto;
+}
+
+.contact-text .view-more a{
+	display: inline-block;
+	border: 1px solid #ff00ff;
+	border-radius: 15px;
+	background: #ff00ff;
+	color: #fff;
+	padding: 0.5rem;
+	width: 12rem;
+	font-family:'myfont_02',YuGothic,"Yu Gothic","游ゴシック","メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif;
+	letter-spacing: 0.1rem;
+	font-weight: bold;
+}
+
+@media screen and (max-width:768px){
+
+	/* news-slider */
+	.news-slider img {
+		max-width:40vw;
+		max-height:40vw;
+	}
+
+	/* 幅調整 */
+	.news-text{
+		width: 90%;
+	}
+
+	.about-img img{
+		max-width: 60vw;
+	}
+
+	.works-img img{
+		max-width: 90vw;
+	}
+
+	.gallery-img img{
+		max-width: 90vw;
+	}
+
+}
