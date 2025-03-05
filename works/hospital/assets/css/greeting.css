@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+/* ごあいさつ
+---------------------------------------------*/
+.greeting_content {
+	overflow : hidden;
+}
+.greeting_copy {
+	text-align: center;
+	margin-top: 30px;
+	line-height: 1.7;
+}
+.greeting_left .text_top {
+	margin-bottom: 20px;
+}
+/* 経歴
+---------------------------------------------*/
+.career {
+	background: #e2f0d9;
+	margin: 40px 0;
+	padding: 40px 6.7%;
+	display: flex;
+	width: 86.6%;
+	border-radius: 20px;
+}
+.career div {
+	text-align: center;
+}
+.career_left {
+	width: 60%;
+	margin-right: 5%;
+}
+.career_right {
+	width: 35%;
+}
+.career div p {
+	background: #79bd9a;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	font-size: 1.8rem;
+	padding: 10px 0;
+	margin-bottom: 30px;
+	width: 150px;
+}
+.career div dl {
+	text-align: left;
+}
+.career div dl dt {
+	float: left;
+	width: 6em;
+	position: absolute;
+}
+.career div dl dd {
+	padding-left: 7.5em;
+}
+.career div ul {
+	text-align: left;
+}
+
+/* レスポンシブ設定
+---------------------------------------------*/
+/* 766px以下 */
+@media screen and (max-width: 767px) {
+	/* ごあいさつ
+	-----------------------------------------*/
+	.greeting_copy {
+		margin: 10px auto;
+	}
+	/* 経歴
+	-----------------------------------------*/
+	.career {
+		display: block;
+	}
+	.career_left {
+		width: 100%;
+		margin-right: 0;
+		margin-bottom: 30px;
+	}
+	.career_right {
+		width: 100%;
+	}
+	.career div p {
+		font-size: 1.6rem;
+	}
+}

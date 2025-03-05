@@ -1,0 +1,698 @@
+@charset "UTF-8";
+
+/* 共通項目
+---------------------------------------------*/
+html {
+	overflow-y: scroll;
+	font-size: 62.5%;
+}
+body {
+	color: #4d4d4d;
+	background: #fefefe;
+	font-size: 1.6rem;
+}
+a {
+	color: #4d4d4d;
+	text-decoration: none;
+}
+.wrapper {
+	width: 96.8%;
+	min-width: 300px;
+	max-width: 960px;
+	padding: 0 1.6%;
+	margin: 0 auto;
+	line-height: 1.5;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+main {
+	display: block;
+}
+/* 行選択時背景色を変更 */
+::selection {
+    background: #79bd9a;
+    color: #fff;
+}
+/* Firefox */
+::-moz-selection {
+    background: #79bd9a;
+    color: #fff;
+}
+/* headder
+---------------------------------------------*/
+header {
+	background: #fefefe;
+	width: 100%;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.header_top {
+	display: flex;
+	align-items: center;
+}
+.header_logo {
+	width: 35%;
+}
+/* 電話、WEB予約、診療時間 */
+.header_btns {
+	font-size: 0;/*ボタン間の隙間を埋めるため*/
+	width: 65%;
+	text-align: right;
+}
+.header_btns li {
+	display: inline-block;
+	text-align: center;
+	font-size: 2.1rem;
+}
+.header_btns li a {
+	display: block;
+	padding: 20px 5%;
+}
+/* 電話、WEB予約、診療時間のアイコン */
+.fa-phone { /* 電話アイコンのみ反転させているため、padding-leftだが右側に余白を設定 */
+	padding-left: 10px;
+}
+.calendar {
+	padding-right: 10px;
+	padding-bottom: 5px;
+	width: 1em;
+}
+.clock {
+	width: 1em;
+	vertical-align: sub;
+	padding-right: 10px;
+}
+.tel {
+	width: 35%;
+	word-wrap: break-word;
+}
+.tel a {
+	color: #79bd9a;
+}
+/* WEB予約、診療時間のボタン */
+.header_btn {
+	background: #79bd9a;
+	width: 27%;
+}
+.header_btn a {
+	color: #fff;
+}
+.header_btn a:hover{
+	background: #95d6b5;
+	transition: 0.2s ;
+}
+.reserve_btn,
+.reserve_btn a {
+	border-radius: 0 0 0 15px;
+}
+.calender_btn,
+.calender_btn a {
+	border-radius: 0 0 15px 0;
+}
+/* ナビゲーション */
+.header_nav {
+	padding: 13px 5.6%;
+}
+.header_nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+.header_nav ul li {
+	display: inline;
+	font-weight: bold;
+}
+.header_nav ul li a {
+	font-size: 1.8rem;
+	color: #4d4d4d;
+}
+.header_nav ul li a:hover{
+	color: #79bd9a;
+	transition: 0.2s ;
+}
+/* ハンバーガーボタン */
+.header_btns .hamburger_btn {
+	display: none;
+}
+
+/* main
+---------------------------------------------*/
+/* 共通 */
+h2 {
+	font-size: 2.4rem;
+	text-align: center;
+	line-height: 1em;
+}
+.small_title {
+	font-size: 1.6rem;
+	color: #79bd9a;
+}
+.sp_only {
+	display: none;
+}
+.sp_only_i {
+	display: none;
+}
+/* ページ遷移ボタン */
+.top_btn {
+	text-align: center;
+	margin: 0 auto;
+	width: 200px;
+	margin-top: 30px;
+}
+.top_btn a{
+	background: #79bd9a;
+	padding: 10px 40px;
+	border-radius: 10px;
+	color: #fff;
+	display: block;
+}
+.top_btn a::after {
+	content: "\f105";
+	font-family: "Font Awesome 5 Free";
+	font-weight: bold;
+	color: #79bd9a;
+	background: #fff;
+	border-radius: 15px;
+	margin-left: 0.5em;
+	padding: 1.1px 5.5px;
+}
+.top_btn a:hover{
+	background: #95d6b5;
+	transition: 0.2s ;
+}
+.top_btn a:hover::after{
+	color: #95d6b5;
+}
+/* メインビジュアル */
+.main_visual {
+	width: 98%;
+	min-width: 300px;
+	max-width: 1200px;
+	margin: 20px auto;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+.main_visual_copy p {
+	font-size: 3.6rem;
+	border-bottom: 8px solid #fff5c3;
+	background: rgba(255, 255, 255, 0.5);
+	line-height: 1.3em;
+	padding: 0 0.7em;
+}
+.main_visual_copy {
+	position: absolute;
+	bottom: 18%;
+	left: 7%;
+}
+.main_visual .copy_bottom {
+	position: relative;
+	left: 10%;
+}
+/* 下層ページのメインビジュアルの文字 */
+.page_title {
+	position: absolute;
+	color: #fff;
+	font-size: 3.6rem;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	height: 1em;
+	text-align: center;
+}
+/* footer
+---------------------------------------------*/
+footer {
+	background: #79bd9a;
+	padding-top: 40px;
+}
+.top_access {
+	background: #fefefe;
+	border-radius: 10px;
+	padding: 40px 2.5%;
+}
+.footer_logo {
+	text-align: center;
+}
+.access_left {
+	float: left;
+	width: 48%;
+	margin-top: 35px;
+	margin-right: 2%;
+}
+.access_left p {
+	margin-bottom: 20px;
+}
+.access_right {
+	float: right;
+	width: 48%;
+	margin-top: 35px;
+	margin-left: 2%;
+}
+.closed {
+	text-align: center;
+}
+/* 時計アイコン */
+.clock_b {
+	padding-right: 10px;
+	width: 1em;
+	vertical-align: sub;
+}
+/* 電車アイコン */
+.train {
+	vertical-align: sub;
+	width: 0.8em;
+	padding-right: 5px;
+}
+.footer_btn {
+	border: 2px solid #5b876d;
+	text-align: center;
+	max-width: 400px;
+	border-radius: 10px;
+}
+.footer_btn a {
+	display: block;
+	padding: 10px 0;
+	border-radius: 10px;
+}
+.footer_btn a:hover {
+	background: #e2f0d9;
+	transition: 0.2s ;
+}
+.accessmap {
+	margin-bottom: 15px;
+}
+.accessmap img {
+	border: 2px solid #5b876d;
+}
+.access_info {
+	float: left;
+	width: 65%;
+}
+.google_btn {
+	border: 2px solid #5b876d;
+	text-align: center;
+	max-width: 145px;
+	border-radius: 10px;
+	float: right;
+	width: 33%;
+}
+.google_btn a {
+	border-radius: 10px;
+	display: block;
+	padding: 10px 3px;
+	font-size: 1.2rem;
+}
+.google_btn a:hover {
+	background: #e2f0d9;
+}
+/* 診療時間 */
+.schedule {
+	border: 1px solid #5b876d;
+	width: 92%;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	overflow: hidden;
+	table-layout: fixed;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.schedule tr {
+	height: 2.8em;
+}
+.schedule th {
+	background: #5b876d;
+	color: #fff;
+}
+.schedule th+th {
+	border-left: 1px solid #5b876d;
+}
+.schedule th:first-child {
+	border-radius: 10px 0 0 0;
+}
+.schedule th:last-child {
+	border-radius: 0 10px 0 0;
+}
+.schedule td {
+	font-size: 1.4rem;
+}
+.schedule .dot {
+	color: #5b876d;
+}
+.schedule td:first-child {
+	border-top: 1px solid #5b876d;
+}
+.schedule td+td {
+	border-top: 1px solid #5b876d;
+	border-left: 1px solid #5b876d;
+}
+.schedule tr:last-child tr {
+	border-radius: 0 0 10px 10px;
+}
+.schedule .title {
+	width: 6em;
+}
+.schedule .vertical span {
+	display: inline-block;
+	width: 1em;
+}
+/* ナビゲーション */
+.footer_nav {
+	clear: both;
+	padding: 35px 14% 25px;
+}
+.footer_nav ul {
+	display: flex;
+	justify-content: space-between;
+}
+.footer_nav ul li {
+	display: inline;
+}
+.footer_nav ul li a {
+	color: #fff;
+	font-size: 1.4rem;
+	position: relative;
+}
+footer ul li a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	transform: scale(0, 1);
+	transition: 0.2s;
+}
+.footer_nav ul li a:hover::before {
+	transform: scale(1);
+}
+.copyright {
+	text-align: center;
+	color: #fff;
+	padding-bottom: 35px;
+}
+.copyright small {
+	font-size: 1.4rem;
+}
+/* ページトップボタン
+---------------------------------------------*/
+#page_top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+	width: 60px;
+}
+#page_top a {
+	display: block;
+	transition-duration: 0.1s;
+}
+#page_top a:hover img {
+	transform: scale(1.2,1.2);
+	transition-duration: 0.1s;
+}
+/* カレント設定
+---------------------------------------------*/
+/* headerナビゲーション */
+#home .header_nav .home a,
+#about .header_nav .about a,
+#access .header_nav .access a,
+#diagnosis .header_nav .diagnosis a,
+#first .header_nav .first a,
+#greeting .header_nav .greeting a {
+	color: #79bd9a;
+}
+/* footerナビゲーション */
+#home .footer_nav .home a::before,
+#about .footer_nav .about a::before,
+#access .footer_nav .access a::before,
+#diagnosis .footer_nav .diagnosis a::before,
+#first .footer_nav .first a::before,
+#greeting .footer_nav .greeting a::before,
+#news .footer_nav .news a::before {
+	transform: scale(1);
+}
+
+/* レスポンシブ設定
+---------------------------------------------*/
+/* 855px以下 */
+@media screen and (max-width: 856px) {
+	/* header
+	-----------------------------------------*/
+	/* 電話、WEB予約、診療時間 */
+	.header_btns li {
+		font-size: 1.8rem;
+	}
+	.clock {
+		width: 20px;
+	}
+	/* メインビジュアルの文字 */
+	.main_visual p {
+		font-size: 2.6rem;
+	}
+}
+/* 766px以下 */
+@media screen and (max-width: 767px) {
+	/* header
+	-----------------------------------------*/
+	.header_top {
+		min-height: 65px;
+	}
+	.header_logo {
+		max-width: 268px;
+		min-width: 147px;
+		width: 47%;
+	}
+	/* 電話番号、診療時間ボタン非表示 */
+	.telnum,
+	.header_btns .calender_btn {
+		display: none;
+	}
+	.header_btns {
+		width: 53%;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.header_btns li {
+		margin-right: 2.6%;
+		width: 50px;
+	}
+	/* ボタンのアイコン化 */
+	.header_btns li a,
+	.header_btns .hamburger_btn {
+		padding: 0;
+		background: #79bd9a;
+	}
+	.header_btn a {
+		font-size: 1rem;
+	}
+	.tel,
+	.tel a,
+	.reserve_btn,
+	.reserve_btn a,
+	.header_btns .hamburger_btn {
+		border-radius: 10px;
+		width: 50px;
+		height: 50px;
+	}
+	.tel a:hover,
+	.header_btns .hamburger_btn:hover {
+		background: #95d6b5;
+	}
+	.tel {
+		margin-top: -20px;
+		position: relative;
+		top: -20px;
+	}
+	.reserve_btn {
+		position: relative;
+		top: 4px;
+	}
+	.tel .fa-phone {
+		padding-left: 0;
+		color: #fff;
+		position: relative;
+		top: 13px;
+	}
+	.clock {
+		width: 25px;
+		padding-right: 0;
+		padding-top: 6px;
+	}
+	/* ハンバーガーボタン */
+	.header_btns .hamburger_btn {
+		position: relative;
+		display: block;
+		top: 5px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.hamburger_line {
+		position: relative;
+		width: 25px;
+		height: 2px;
+		top: 20px;
+		left: 50%;
+		background: #fff;
+		transform: translateX(-50%);
+	}
+	.hamburger_line::before,
+	.hamburger_line::after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 2px;
+		left: 0;
+		background: inherit;
+	}
+	.hamburger_line::before {
+		bottom: 10px;
+	}
+	.hamburger_line::after {
+		top: 10px;
+	}
+	.hamburger_line.open {
+		background: transparent;
+	}
+	.hamburger_line.open::before {
+		bottom: -1px;
+		background: #fff;
+		transform: rotate(45deg);
+	}
+	.hamburger_line.open::after {
+		top: 1px;
+		background: #fff;
+		transform: rotate(-45deg);
+	}
+	.header_btns .hamburger_btn span {
+		display: block;
+		color: #fff;
+		margin-top: 30px;
+		font-size: 1rem;
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 2px;
+	}
+	/* ナビゲーション */
+	header .wrapper:last-child {
+		width: 100%;
+		padding: 0;
+	}
+	.header_nav {
+		background: #e2f0d9;
+	}
+	.header_nav ul {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		height: 50%;
+		padding: 30px 0;
+	}
+	.header_nav ul li {
+		display: block;
+		font-weight: normal;
+	}
+	.header_nav ul li+li {
+		margin-top: 20px;
+	}
+	/* main
+	-----------------------------------------*/
+	/* 共通 */
+	h2 {
+		font-size: 1.8rem;
+		line-height: 1em;
+	}
+	.small_title {
+		font-size: 1.2rem;
+	}
+	.sp_only {
+		display: block;
+	}
+	.sp_only_i {
+		display: inline-block;
+	}
+	/* ページ遷移ボタン */
+	.top_btn {
+		width: 160px;
+	}
+	.top_btn a{
+		padding: 10px 20px;
+	}
+	/* メインビジュアル */
+	.main_visual {
+		margin-top: 0;
+	}
+	/* footer
+	-----------------------------------------*/
+	.footer_logo {
+		padding: 0 20%;
+	}
+	.access_left {
+		float: none;
+		width: 100%;
+		text-align: center;
+		margin-right: 0;
+	}
+	.access_right {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+	}
+	.footer_btn {
+		margin: 0 auto;
+	}
+	.accessmap {
+		text-align: center;
+	}
+	.access_info {
+		float: none;
+		width: 100%;
+		margin: 0 auto;
+		max-width: 473px;
+	}
+	.google_btn {
+		float: none;
+		width: 100%;
+		margin: 10px auto 0;
+	}
+	/* 診療時間 */
+	.schedule {
+		width: 100%;
+		max-width: 400px;
+		margin: 0 auto 20px;
+	}
+	/* ナビゲーション */
+	.footer_nav ul {
+		display: block;
+	}
+	.footer_nav ul li {
+		display: inline-block;
+		width: 48%;
+		text-align: center;
+	}
+}
+/* 569px以下 */
+@media screen and (max-width: 570px) {
+	/* メインビジュアルの文字 */
+	.main_visual p {
+		font-size: 2rem;
+	}
+}
+/* 399px以下 */
+@media screen and (max-width: 400px) {
+	/* メインビジュアルの文字 */
+	.main_visual_copy p {
+		font-size: 1.6rem;
+		border-bottom: 5px solid #fff5c3;
+	}
+}

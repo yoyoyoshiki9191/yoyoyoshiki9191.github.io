@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+h2 {
+	text-align: left;
+	background: #e2f0d9;
+	border-top: 3px dotted #79bd9a;
+	border-bottom: 3px dotted hsl(149, 34%, 61%);
+	display: flex;
+	align-items: center;
+}
+h2::before {
+	content: url(../images/first/tree.svg);
+	margin-left: 10px;
+	margin-right: 15px;
+}
+.content {
+	padding: 40px 10px;
+}
+.top_blank {
+	margin-top: 1em;
+}
+/* メニュー
+---------------------------------------------*/
+.first_menu {
+	text-align: center;
+	margin: 40px 0;
+}
+.first_menu li {
+	display: inline;
+}
+.first_menu li+li {
+	margin-left: 40px;
+}
+.first_menu li a {
+	font-size: 1.8rem;
+	font-weight: bold;
+	position: relative;
+}
+.first_menu  li a::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	width: 100%;
+	height: 3px;
+	background: #79bd9a;
+	transform: scale(0, 1);
+	transition: 0.2s;
+}
+.first_menu  li a:hover::before {
+	transform: scale(1);
+}
+
+/* はじめての方へ
+---------------------------------------------*/
+.first_detail ul {
+	list-style: disc;
+	padding-left: 1em;
+}
+
+/* 診療の流れ
+---------------------------------------------*/
+.flow ol {
+	list-style: decimal;
+	list-style-position: inside;
+}
+.flow .flow_item {
+	background: #fffdf2;
+	border-radius: 20px;
+	margin-bottom: 60px;
+	padding: 20px;
+	position: relative;
+	left: 0;
+	bottom: 0;
+}
+.flow .flow_item:last-child {
+	margin-bottom: 0;
+}
+/* 下矢印のアイコン設定 */
+.flow .flow_item::after {
+	content: "\f078";
+	font-family: "Font Awesome 5 Free";
+	font-weight: bold;
+	font-size: 4.5rem;
+	color: #79bd9a;
+	position: absolute;
+	bottom: -64px;
+	left: 47.4%;
+}
+.flow .flow_item:last-child::after {
+	content: "";
+}
+.flow_title {
+	font-size: 1.8rem;
+	padding-bottom: 10px;
+	display: inline-block;
+}
+/* ご来院・受付の横並び設定 */
+.flow2 {
+	display: flex;
+	border-top: 3px dotted #e2f0d9;
+}
+.flow2 .text_top {
+	width: 65%;
+	margin-right: 5%;
+	border: 0;
+}
+.flow2 .card {
+	width: 30%;
+	padding-top: 15px;
+	text-align: right;
+}
+.text_top {
+	border-top: 3px dotted #e2f0d9;
+	padding-top: 15px;
+}
+/* 電話番号、WEB予約ボタン */
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 80%;
+	margin: 20px 10% 0;
+}
+.buttons li {
+	width: 40%;
+}
+.buttons .footer_btn  {
+	max-width: 300px;
+	overflow: hidden;
+	background: #fefefe;
+}
+/* よくある質問
+---------------------------------------------*/
+.question dl {
+	background: #fffdf2;
+	border-radius: 20px;
+	padding: 20px;
+}
+.question dl dt {
+	font-size: 1.8rem;
+	margin-bottom: 25px;
+	padding-top: 20px;
+}
+.question dl dt::before {
+	content: "Q.";
+	margin-right: 5px;
+}
+.question dl dt:first-child {
+	padding-top: 0;
+}
+.question dl dd{
+	border-bottom: 3px dotted #e2f0d9;
+	padding-bottom: 20px;
+	margin-left: 1em;
+}
+.question dl dd::before {
+	content: "A.";
+	margin-right: 5px;
+}
+.question dl dd:last-child {
+border: 0;
+}
+.question dl dd .buttons {
+	margin-left: 9.5%;
+}
+/* レスポンシブ設定
+---------------------------------------------*/
+/* 766px以下 */
+@media screen and (max-width: 767px) {
+	/* メニュー
+	-----------------------------------------*/
+	.first_menu {
+		margin: 30px 0;
+	}
+	.first_menu li a {
+		font-size: 1.4rem;
+	}
+	.first_menu li+li {
+		margin-left: 20px;
+	}
+	.first_menu  li a::before {
+		height: 2px;
+	}
+	/* 診療の流れ
+	-----------------------------------------*/
+	/* 電話番号、WEB予約ボタン */
+	.buttons {
+		display: block;
+	}
+	.buttons li {
+		width: 100%;
+	}
+	.buttons li+li {
+		margin-top: 10px;
+	}
+	.buttons .footer_btn  {
+		max-width: 200px;
+	}
+	/* ご来院・受付の横並び設定 */
+	.flow2 {
+		display: block;
+	}
+	.flow2 .text_top {
+		width: 100%;
+		margin-right: 0;
+	}
+	.flow2 .card {
+		width: 100%;
+		text-align: center;
+	}
+}

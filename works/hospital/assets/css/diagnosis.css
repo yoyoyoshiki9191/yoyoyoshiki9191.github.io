@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+/* 診療科メニュー
+---------------------------------------------*/
+.diagnosis_bg {
+	background: #E0EED7;
+}
+.diagnosis_menu {
+	margin-top: 30px;
+	padding: 40px 0;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+.diagnosis_menu li {
+	width: 143px;
+}
+.diagnosis_menu li+li {
+	margin-left: 3%;
+}
+.diagnosis_menu li a {
+	background: #fff;
+	display: block;
+	width: 100%;
+	border-radius: 50%;
+	padding: 18% 2%;
+	font-size: 1.4rem;
+}
+.diagnosis_menu li a:hover {
+	background: #FFF5C3;
+	transition: 0.2s ;
+}
+.diagnosis_menu li a img {
+	width: 50%;
+}
+
+/* 診療内容
+---------------------------------------------*/
+.explanation {
+	padding-bottom: 30px;
+}
+.explanation div {
+	background: #fefefe;
+	margin-bottom: 30px;
+	padding: 20px;
+	border-radius: 20px;
+}
+.explanation div:last-child {
+	margin-bottom: 0;
+}
+.explanation div dt {
+	font-size: 2.1rem;
+	padding-bottom: 10px;
+	border-bottom: 3px dotted #79BB98;
+}
+.explanation div dt span {
+	background: #79BB98;
+	border-radius: 30px;
+	padding: 12.5px 12.5px;
+	margin-right: 10px;
+	width: 30px;
+	display: inline-block;
+}
+.explanation div dd {
+	padding: 10px;
+}
+#consultation dd span {
+	display: block;
+	margin-top: 1em;
+}
+#consultation dd ul {
+	list-style: disc;
+	margin-left: 1em;
+}
+/* レスポンシブ設定
+---------------------------------------------*/
+/* 766px以下 */
+@media screen and (max-width: 767px) {
+	/* 診療科メニュー
+	-----------------------------------------*/
+	.diagnosis_menu {
+		padding: 20px 0;
+	}
+	.diagnosis_menu li {
+		width: 97px;
+	}
+	.diagnosis_menu li a {
+		font-size: 1.2rem;
+	}
+	/* 診療内容
+	-----------------------------------------*/
+	.explanation {
+		padding-bottom: 20px;
+	}
+	.explanation div {
+		margin-bottom: 20px;
+	}
+	.explanation div dt {
+		font-size: 1.8rem;
+	}
+}

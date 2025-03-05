@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+h2 {
+	padding-bottom: 20px;
+}
+/* こばやし小児科の特徴
+---------------------------------------------*/
+.kobayashi_pediatrics {
+	padding: 40px 0;
+}
+.explanation .yellow {
+	background: #fffdf2;
+}
+.explanation .green {
+	background: #e2f0d9;
+}
+.explanation .wrapper{
+	width: 90.6%;
+	padding: 30px 4.7%;
+	display: flex;
+	max-width: 900px;
+	min-width: 280px;
+}
+.explanation .text {
+	width: 63%;
+}
+.explanation .text dt {
+	font-size: 1.8rem;
+}
+.explanation .text dt span {
+	font-family: 'Great Vibes', cursive;
+	font-weight: bold;
+	font-size: 4.8rem;
+	color: #5b876d;
+	padding-right: 0.2em;
+}
+.explanation .picture {
+	width: 30%;
+	padding-left: 7%;
+}
+/* 院内紹介
+---------------------------------------------*/
+.introduction ul {
+	display: flex;
+	flex-wrap:wrap;
+	width: 100%;
+}
+.introduction ul li {
+	width: 50%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+/* レスポンシブ設定
+---------------------------------------------*/
+/* 766px以下 */
+@media screen and (max-width: 767px) {
+	/* こばやし小児科の特徴
+	-----------------------------------------*/
+	.explanation .wrapper{
+		display: block;
+	}
+	.explanation .text {
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.explanation .text dt {
+		font-size: 1.6rem;
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+	.explanation .text dt span {
+		font-size: 3.6rem;
+	}
+	.explanation .picture {
+		width: 100%;
+		padding-left: 0;
+		text-align: center;
+	}
+	/* 院内紹介
+	-----------------------------------------*/
+	.kobayashi_pediatrics {
+		padding-top: 20px;
+	}
+	.introduction ul li {
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+}

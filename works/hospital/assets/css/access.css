@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+h2 {
+	padding-bottom: 20px;
+}
+/* アクセス
+---------------------------------------------*/
+.access_detail {
+	margin-top: 40px;
+}
+.access_detail p {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.access_copy {
+	font-size: 2.1rem;
+}
+.access_copy span {
+	background: linear-gradient(transparent 50%, #FFF5C3 50%);
+}
+/* GooleMap */
+.google_map {
+	width: 100%;
+}
+.access_guide {
+	display: block;
+	overflow: hidden;
+}
+/* 交通手段の案内 */
+.access_type {
+	float: left;
+	width: 47%;
+}
+.access_type  div {
+	background: #e2f0d9;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+/* アイコン */
+.bicycle, .car {
+	vertical-align: baseline;
+	width: 1.2em;
+	padding-right: 5px;
+}
+.access_type  div:first-child {
+	margin-top: 40px;
+}
+/* こばやし小児科の写真 */
+.kobayashi_pediatrics {
+	float: right;
+	width: 47%;
+	margin-top: 20px;
+}
+/* 診療時間
+---------------------------------------------*/
+.schedule_detail {
+	clear: both;
+	margin: 40px 0;
+}
+
+/* 診療時間スケジュール */
+.schedule_detail table {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto 20px;
+}
+.schedule_detail table .title {
+	width: 8em;
+}
+/* 診療時間についての文言 */
+.schedule_detail ul {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+}
+.schedule_detail ul li::before {
+	content: "";
+    width:  15px;
+    height:  15px;
+    display:  inline-block;
+    background-color: #e2f0d9;
+    border-radius:  50%;
+	position:  relative;
+    top: 1px;
+    margin-right: 5px;
+}
+/* レスポンシブ設定
+---------------------------------------------*/
+/* 766px以下 */
+@media screen and (max-width: 767px) {
+	/* アクセス
+	-----------------------------------------*/
+	.access_detail {
+		margin-top: 30px;
+	}
+	.access_copy {
+		font-size: 1.6rem;
+	}
+	.access_copy span {
+		border-bottom: 5px solid rgba(255, 245, 195, 0.8);
+	}
+	.google_map {
+		max-height: 300px;
+	}
+	.access_detail .address {
+		text-align: left;
+		max-width: 275px;
+		margin: 0 auto 1em;
+	}
+	.access_type {
+		float: none;
+		width: 100%;
+	}
+	.access_type  div:first-child {
+		margin-top: 20px;
+	}
+	.kobayashi_pediatrics {
+		float: none;
+		width: 100%;
+	}
+
+	/* 診療時間
+	-----------------------------------------*/
+	.schedule_detail {
+		margin-top: 30px;
+	}
+}
