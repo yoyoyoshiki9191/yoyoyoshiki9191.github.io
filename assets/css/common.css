@@ -383,6 +383,15 @@ header{
 		transform: translateY(-50%) translateX(-50%);
 	}
 
+	/* ナビのホバー */
+	.sp_nav .sp_nav-inner nav ul li a{
+		transition: all 0.4s;
+	}
+
+	.sp_nav .sp_nav-inner nav ul li a:hover{
+		letter-spacing: 10px;
+	}
+
 	/* nav文字サイズ */
 	h1 img{
 		height: 30vw;
