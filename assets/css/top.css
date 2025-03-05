@@ -408,18 +408,18 @@ body.appear #wrapper,body.appear #particles-js{
 /* scroll */
 .scrolldown4 span{
     /*描画位置*/
-	bottom:40px;
+	bottom:100px;
 }
 
 /* 矢印の描写 */
 .scrolldown4:before {
     /*描画位置*/
-    bottom: 30px;
+    bottom: 90px;
 }
 
 .scrolldown4:after{
     /*描画位置*/
-	bottom:30px;
+	bottom:90px;
 }
 
 	/* news-slider */
