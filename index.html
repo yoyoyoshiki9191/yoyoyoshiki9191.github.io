@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- ページ情報 -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="千葉県を拠点に活動するWebデザイナー">
+<title>YOSHIKI OFFICIAL WEBSITE</title>
+
+<!-- faviconの読み込み -->
+<link rel="icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+
+<!-- cssの読み込み -->
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/slick.css">
+<link rel="stylesheet" href="assets/css/slick-theme.css">
+<link rel="stylesheet" href="assets/css/common.css">
+<link rel="stylesheet" href="assets/css/top.css">
+
+<!-- web font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tsukimi+Rounded:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- jQueryの読み込み -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+<!-- load画面 -->
+<div id="splash">
+    <div id="splash_logo">
+        <img src="assets/img/common/avatar.jpg">
+        <img src="assets/img/common/logo_black.svg" class="fadeUp">
+    </div>
+</div>
+<!---画面遷移用-->
+<div class="splashbg"></div>
+<!-- キラキラ -->
+<div id="particles-js"></div>
+<div id="wrapper">
+    <div class="left">
+        <div class="left-wrap">
+            <div class="left-inner">
+                <h1>
+                    <a href="index.html">
+                        <img src="assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                    </a>
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="right-wrap">
+            <div class="right-inner">
+                <nav>
+                    <ul>
+                        <li><a href="news/index.html">NEWS</a></li>
+                        <li><a href="biography/index.html">BIOGRAPHY</a></li>
+                        <li><a href="works/index.html">WORKS</a></li>
+                        <li><a href="gallery/index.html">GALLERY</a></li>
+                        <li><a href="contact/index.html">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <div class="sns">
+                    <ul>
+                        <li><a href="https://x.com/?lang=ja"><img src="assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                        <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                        <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                        <li><a href="https://www.youtube.com/"><img src="assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <header>
+            <!-- ハンバーガーメニュー用ここから -->
+                <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+                <input id="drawer_input" class="drawer_hidden" type="checkbox">          
+                <!-- ハンバーガーアイコン -->
+                <label for="drawer_input" class="drawer_open"><span></span></label>
+                <div class="sp_nav">
+                    <div class="sp_nav-inner">
+                        <h1>
+                            <a href="index.html">
+                                <img src="assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                            </a>
+                        </h1>
+                        <nav>
+                            <ul>
+                                <li><a href="news/index.html">NEWS</a></li>
+                                <li><a href="biography/index.html">BIOGRAPHY</a></li>
+                                <li><a href="works/index.html">WORKS</a></li>
+                                <li><a href="gallery/index.html">GALLERY</a></li>
+                                <li><a href="contact/index.html">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                        <div class="sns">
+                            <ul>
+                                <li><a href="https://x.com/?lang=ja"><img src="assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                                <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                                <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                                <li><a href="https://www.youtube.com/"><img src="assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            <!-- ハンバーガーメニュー用ここまで -->
+        </header>
+
+        <main>
+            <div class="mv">
+                <div class="sp_logo">
+                    <img src="assets/img/common/logo.svg" alt="YOSHIKI OFFICIAL WEBSITE">
+                </div>
+                <div class="slider">
+                    <div class="slick-img"><img src="assets/img/top/mv_01.png"></div>
+                    <div class="slick-img"><img src="assets/img/top/mv_02.png"></div>
+                    <div class="slick-img"><img src="assets/img/top/mv_03.png"></div>
+                </div>
+                <div class="scrolldown4"><span>Scroll</span></div>
+                <!-- <div>
+                    <a href="#news_container">
+                        <svg class="scrolldown">
+                            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                    </a>
+                </div> -->
+            </div>
+            <div class="news-container" id="news_container">
+                <h2>NEWS</h2>
+                <div class="news-text">
+                    <a href="news/index.html">
+                        <ul>
+                            <li>2025.xx.xx</li>
+                            <li>INFORMATION</li>
+                        </ul>
+                        <p>アバターの更新完了のお知らせ</p>
+                    </a>
+                </div>
+                <div class="news-text">
+                    <a href="news/index.html">
+                        <ul>
+                            <li>2025.02.14</li>
+                            <li>INFORMATION</li>
+                        </ul>
+                        <p>【GALLERY】ページの更新完了のお知らせ</p>
+                    </a>
+                </div>
+                <div class="news-text">
+                    <a href="news/index.html">
+                        <ul>
+                            <li>2025.02.10</li>
+                            <li>INFORMATION</li>
+                        </ul>
+                        <p>【WORKS】ページの更新完了のお知らせ</p>
+                    </a>
+                </div>
+                <div class="view-more">
+                    <a href="news/index.html"><span>VIEW MORE</span></a></div>
+            </div>
+            <div class="about-container">
+                <h2>ABOUT</h2>
+                <div class="about-img">
+                    <a href="biography/index.html">
+                        <img src="assets/img/common/avatar.jpg" alt="サイト製作者のアバター">
+                    </a>
+                </div>
+                <div class="about-text">
+                    <h3>和田 慶季</h3>
+                    <span>YOSHIKI WADA</span>
+                    <p>
+                        東京都出身、千葉県浦安市在住。
+                        2024年11月1日、突如Web業界への転職を決意。<br>
+                        2025年xx月xx日、晴れてWebデザイナとしてデビュー。
+                    </p>
+                </div>
+                <div class="view-more"><a href="biography/index.html"><span>VIEW MORE</span></a></div>
+            </div>
+            <div class="works-container">
+                <h2>WORKS</h2>
+                <div class="works-img">
+                    <a href="works/index.html">
+                        <img src="assets/img/top/top_works.png" alt="お仕事"></a>
+                </div>
+                <div class="works-text">
+                    <p>個人で作成した架空のサイト、バナー、ロゴを掲載しています。</p>
+                </div>
+                <div class="view-more"><a href="works/index.html"><span>VIEW MORE</span></a></div>
+            </div>
+            <div class="gallery-container">
+                <h2>GALLERY</h2>
+                <div class="gallery-img">
+                    <a href="gallery/index.html">
+                        <img src="assets/img/top/top_gallery.png" alt="趣味"></a>
+                </div>
+                <div class="gallery-text">
+                    <p>趣味でやってるあれこれを掲載しています。</p>
+                </div>
+                <div class="view-more"><a href="gallery/index.html"><span>VIEW MORE</span></a></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-text">
+                    <p>お問い合わせ・お仕事のご依頼等はこちらから</p>
+                    <div class="view-more"><a href="contact/index.html"><span>CONTACT</span></a></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="sns">
+                <ul>
+                    <li><a href="https://x.com/?lang=ja"><img src="assets/img/common/X.png" alt="Twitter(X)"></a></li>
+                    <li><a href="https://www.instagram.com/accounts/login/?next=%2Fpeter_gomez%2F&source=private_profile&locale=ja-JP"><img src="assets/img/common/Instagram.svg" alt="Instagram"></a></li>
+                    <li><a href="https://www.tiktok.com/login?lang=ja-JP&redirect_url=https%3A%2F%2Fwww.tiktok.com%2Fupload%3Flang%3Dja"><img src="assets/img/common/tiktok.svg" alt="TikTok"></a></li>
+                    <li><a href="https://www.youtube.com/"><img src="assets/img/common/youtube.svg" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <p><small>&copy;2025 Yoshiki Wada All rights reserved.</small></p>
+            <!-- <div class="pagetop"><a><img src="assets/img/common/pagetop_o.png" alt="pagetop"><img src="assets/img/common/pagetop.png" class="on" alt="pagetop"></a></div> -->
+        </footer>
+    </div>
+</div>
+<!-- js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.
+cookie.js"></script>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/slick_script.js"></script>
+<!-- js -->
+</body>
+</html>
