@@ -1,0 +1,358 @@
+@charset "utf-8";
+
+/* 大見出し */
+.heading2{
+    background: url(../images/choco_contact_heading_1280x480.png) center right / 60% no-repeat;
+}
+
+/* メインコンテンツ */
+h3{
+    font-size: 30px;
+    /* padding-bottom: 50px; */
+    text-align: center;
+    margin-top: 90px;
+}
+
+/* 店舗への問い合わせ */
+.shop-contact{
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    padding: 30px 0;
+    margin: 70px auto;
+}
+
+.tel-number{
+    font-size: 24px;
+    line-height: 2.5;
+    width: 290px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+}
+
+.tel-number img{
+    vertical-align: text-bottom;
+    margin-right: 0.5em;
+}
+
+/* よくあるご質問 */
+
+.faq-area{
+    max-width: 600px;
+    margin: 0 auto 70px;
+}
+
+/* 開閉ボタンのデザイン */
+.faq-area h4{
+    font-size: 24px;
+    line-height: 2;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+/*アイコンの＋*/
+.faq-area h4::before,
+.faq-area h4::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    
+}
+.faq-area h4::before{
+    top:48%;
+    right: 15px;
+    transform: rotate(0deg);
+}
+.faq-area h4::after{    
+    top:48%;
+    right: 15px;
+    transform: rotate(90deg);
+
+}
+/*　closeというクラスがついたら形状変化　*/
+.faq-area h4.open::after{
+    transform: rotate(0deg);
+}
+
+
+/* FAQ内容 */
+.faq-area dt{
+    background-color: #4d4d4d;
+}
+
+.faq-area dd{
+    background-color: #808080;
+
+}
+
+.faq-area dl div{
+    border-top: 1px solid #fff;
+}
+
+.faq-area dt,
+.faq-area dd{
+    padding: 15px 30px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.faq-area dt::before{
+    content: "Q";
+}
+
+.faq-area dd::before{
+    content: "A";
+    color: #5f161d;
+}
+
+.faq-area dt::before,
+.faq-area dd::before{
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1;
+    font-size: 50px;
+    width: 43px;
+}
+
+.faq-area dl{
+    display: none;
+}
+
+main > section > .text{
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+/* 問い合わせフォーム */
+/* 問い合わせ進捗 */
+.form-progress{
+    max-width: fit-content;
+    width: 100%;
+    list-style-type: decimal;
+    list-style-position: inside;
+    display: flex;
+    gap: 32px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.form-progress li{
+    background-color: #4d4d4d;
+    font-weight: bold;
+    line-height: 3;
+    width: 150px;
+    text-align: center;
+    position: relative;
+}
+
+.form-progress li:first-child{
+    background-color: #5f161d;
+}
+
+.form-progress li::before{
+    content: "";
+    position: absolute;
+    left: -24px;
+    border-left: 24px solid transparent;
+    border-top: 24px solid #4d4d4d;
+    border-right: 24px solid transparent;
+    border-bottom: 24px solid #4d4d4d;
+}
+
+.form-progress li:first-child::before{
+    border: none;
+}
+
+.form-progress li::after{
+    content: "";
+    position: absolute;
+    right: -48px;
+    border-left: 24px solid #4d4d4d;
+    border-top: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+
+}
+
+.form-progress li:first-child::after{
+    border-left: 24px solid #5f161d;
+}
+
+/* フォーム */
+form{
+    max-width: 700px;
+    margin: 0 auto 100px;
+}
+
+.formItem{
+    display: flex;
+    padding: 10px;
+    justify-content: flex-start;
+    gap: 30px;
+    align-items: center;
+    border-top: 1px solid #fff;
+}
+
+.formItem:last-child{
+    border-bottom: 1px solid #fff;
+}
+
+.formItem dt{
+    flex: 0 0 140px;
+    font-weight: bold;
+}
+
+.formItem dd{
+    flex: 1 1 auto;
+    width: 100%;
+}
+
+.formItem dt span,
+.formItem dd p,
+form > P span{
+    color: #ac5356;
+    font-weight: 500;
+}
+
+.formItem dd p{
+    font-size: 14px;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea{
+    border: 1px solid #fff;
+    background-color: #ccc;
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+}
+
+textarea{
+    height: 150px;
+}
+
+/* 送信ボタン */
+#submit-btn{
+    background-color: #5f161d;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 3;
+    width: 150px;
+    text-align: center;
+    position: relative;
+    border: none;
+    display: block;
+    margin: 10px auto;
+    box-shadow: 0 5px 0 0 #1a1a1a;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+#submit-btn::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    right: -48px;
+    border-left: 24px solid #5f161d;
+    border-top: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    transition: all 0.5s;
+}
+
+#submit-btn::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: -48px;
+    top: 5px;
+    border-left: 24px solid #1a1a1a;
+    border-top: 24px solid transparent;
+    border-right: 24px solid transparent;
+    border-bottom: 24px solid transparent;
+    transition: all 0.5s;
+}
+
+#submit-btn:hover{
+    background-color: #ccc;
+    color: #5f161d;
+    transform: translateY(3px);
+    box-shadow: 0 2px 0 0 #1a1a1a;
+}
+
+#submit-btn:hover::before{
+    border-left: 24px solid #ccc;
+}
+
+#submit-btn:hover::after{
+    top: 2px;
+}
+
+/* ------------------------
+    レスポンシブ
+------------------------ */
+@media screen and (max-width:768px){
+    .formItem{
+        display: block;
+    }
+}
+
+@media screen and (max-width:600px){
+    .faq-area dt,
+    .faq-area dd{
+        position: relative;
+        padding: 55px 10px 15px 30px;
+        
+    }
+
+    .faq-area dt::before,
+    .faq-area dd::before{
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+
+    .form-progress{
+        flex-direction: column;
+    }
+    .form-progress li{
+        width: 260px;
+        line-height: 2;
+    }
+    
+    .form-progress li::after,
+    .form-progress li:first-child::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        width: 0;
+        border-left: 130px solid transparent;
+        border-top: 20px solid #4d4d4d;
+        border-right: 130px solid transparent;
+        border-bottom: 20px solid transparent;
+    }
+    .form-progress li:first-child::after{
+        border-top: 20px solid #5f161d;
+    }
+
+    .form-progress li::before{
+        border: none;
+    }
+}
+
+@media screen and (max-width:350px){
+    .tel-number{
+    width: 270px;
+    }
+}

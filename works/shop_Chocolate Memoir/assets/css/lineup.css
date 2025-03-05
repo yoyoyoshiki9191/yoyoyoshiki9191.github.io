@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+/* 大見出し */
+.heading2{
+    background: url(../images/choco_lineup_heading_1280x480.png) center right / 60% no-repeat;
+}
+
+/* メインコンテンツ */
+main.inner1{
+    padding-top: 50px;
+}
+
+section{
+    margin-top: 70px;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #fff;
+}
+
+.title-bonbon::after{
+    content: "Bonbon de chocolat";
+    width: 320px;
+}
+
+.title-tablette::after{
+    content: "Tablette de chocolat";
+    width: 320px;
+}
+
+.title-gateau::after{
+    content: "Gâteau au chocolat";
+    width: 350px;
+}
+
+
+.lineup-items{
+    flex-direction: row-reverse;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.lineup-text{
+    max-width: 400px;
+    width: 100%;
+    flex: 0 1 400px;
+}
+
+.lineup-text .button1{
+    margin: 50px auto 0;
+}
+
+
+/* 商品画像slickのボタンとドット調整 */
+.slider{
+    max-width: 400px;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.slide1 img,
+.slide2 img{
+    width: 100%;
+    height: auto;
+}
+
+.slick-prev, 
+.slick-next {
+    z-index: 1;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-size: 30px;
+}
+
+.slick-prev{
+    left: 10px;
+}
+
+.slick-next{
+    right: 20px;
+}
+
+.slick-dots{
+    bottom: 10px;
+}
+
+.slick-dots li button:before{
+    font-size: 10px;
+}
+
+
+/* オンラインショップ誘導エリア */
+.to-onlineshop-area{
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+    width: 100%;
+    padding: 30px 0;
+    margin: 70px auto 100px;
+}
+
+.to-onlineshop-area p{
+    z-index: 2;
+    text-align: center;
+    margin: 10px auto;
+}
+
+@media screen and (max-width:1000px){
+    section{
+        display: block;
+    }
+
+    .lineup-items{
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .slider{
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:430px){
+    .slider{
+        max-width: calc(100vw - 30px);
+    }
+
+    .heading1::after {
+        font-size: 34px;
+    }
+
+}

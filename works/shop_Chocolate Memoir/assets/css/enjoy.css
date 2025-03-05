@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+/* 大見出し */
+.heading2{
+    background: url(../images/choco_enjoy_heading_1280x480.png) center right / 60% no-repeat;
+}
+
+
+/* メインコンテンツ */
+.text{
+    max-width: 500px;
+    width: 100%;
+    text-align: justify;
+}
+
+main p{
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+section.lead-area,
+section.sub-sect01,
+section.sub-sect02,
+section.sub-sect03{
+    margin-top: 70px;
+    padding: 0 30px 70px;
+    border-bottom: 1px solid #fff;
+    text-align: justify;
+}
+
+/* リード文エリア */
+section.lead-area{
+    flex-direction: row-reverse;
+    margin-top: 90px;
+    gap: 30px;
+    max-width: 900px;
+}
+
+h3{
+    font-size: 30px;
+    padding-bottom: 50px;
+    text-align: right;
+}
+
+.lead-area .text{
+    padding-bottom: 50px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    max-width: 550px;
+}
+
+.to-onlineshop{
+    margin: 0 0 0 auto;
+}
+
+.to-onlineshop a{
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+
+
+/* 各楽しみ方セクション */
+.title-wine::after{
+    content: "Les boissons alcoolisées";
+    width: 400px;
+}
+
+.title-tea::after{
+    content: "Le thé";
+}
+
+.title-cc::after{
+    content: "Chocolat chaud";
+}
+
+.flex-r{
+    flex-direction: row-reverse;
+}
+
+.button1{
+    margin-top: 50px;
+}
+
+/* セクション１ */
+.sub-sect01 .flex{
+    max-width: 840px;
+    margin-left: auto;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* セクション２ */
+.sub-sect02 .title-r{
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.sub-sect02 .title-tea{
+    position: absolute;
+    right: 0;
+}
+
+.sub-sect02 .flex{
+    max-width: 840px;
+    margin-right: auto;
+    gap: 40px;
+    padding-bottom: 50px;
+}
+
+/* セクション３ */
+.float-img{
+    float: right;
+    margin: 0 0 40px 40px;
+}
+
+h5{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.7;
+    padding: 20px 0;
+}
+
+h6{
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: YuGothic,"Yu Gothic",Arial,sans-serif;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+dl {
+    padding-bottom: 20px;
+}
+
+dl div{
+    display: flex;
+    justify-content: start;
+    gap: 1em;
+}
+
+ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding-bottom: 20px;
+}
+
+/* オンラインショップ誘導エリア */
+.to-onlineshop-area{
+    position: relative;
+    z-index: 1;
+    max-width: 450px;
+    width: 100%;
+    padding: 30px 0;
+    margin: 70px auto 100px;
+}
+
+.to-onlineshop-area p{
+    z-index: 2;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* ------------------------
+    レスポンシブ
+------------------------ */
+@media screen and (max-width:1000px){
+    section.lead-area,
+    section.sub-sect01,
+    section.sub-sect02,
+    section.sub-sect03{
+        padding: 0 0 70px;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+    }
+
+    main p,h3,h4,h5,h6,dl,ol{
+        max-width: 600px;
+        text-align: justify;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .lead-area,
+    .sub-sect01 .flex,
+    .sub-sect02 .flex{
+        display: block;
+    }
+
+    .lead-area img{
+        max-width: 280px;
+        width: 100%;
+        height: auto;
+        margin-top: 40px;
+    }
+    
+    section.sub-sect01 img,
+    section.sub-sect02 img{
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+    }
+
+    section.sub-sect03 img{
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+        float: none;
+        margin: 0 auto 40px;
+        display: block;
+    }
+
+    .sub-sect02 .title-r{
+        position: static;
+        padding-bottom: 0;
+    }
+    
+    .sub-sect02 .title-tea{
+        position: relative;
+    }
+}
+
+@media screen and (max-width:500px){
+    .heading1::after {
+        font-size: 34px;
+    }
+
+}

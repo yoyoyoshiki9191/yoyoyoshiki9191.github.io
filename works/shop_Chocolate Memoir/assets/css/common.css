@@ -1,0 +1,602 @@
+@charset "utf-8";
+
+/* ------------------------
+    リセットの記述
+------------------------ */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+img{
+    vertical-align: bottom;
+}
+
+a{
+    text-decoration: none;
+}
+
+address{
+    font-style: normal;
+}
+
+/* ------------------------
+    全体に対する基本指示
+------------------------ */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.7;
+    font-family: YuGothic,"Yu Gothic",Arial,sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background-color: #2f2f2f;
+}
+
+a{
+    color: #fff;
+}
+
+/* ------------------------
+    全ページ共通の基本クラス名
+------------------------ */
+/* フォント変更 */
+.shippori-mincho-regular {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.shippori-mincho-semibold {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* エリアの塗分け */
+.bg-red{
+    background-color: #5f161d;
+}
+
+.bg-black{
+    background-color: #1a1a1a;
+}
+
+/* 幅の制御(inner) */
+.inner1{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* 横並びの記述 */
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ------------------------
+    共通パーツスタイリング
+------------------------ */
+
+/* ------------------------
+    ヘッダー
+------------------------ */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 55px;
+    z-index: 3;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+h1 img{
+    width: 100px;
+    height: auto;
+}
+
+nav ul li{
+    margin-bottom: 20px;
+}
+nav a{
+    position: relative;
+    padding: 2px 3px;
+}
+
+.current{
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #2f2f2f;
+}
+
+/* ホバー時に下線が出る */
+nav a::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    bottom: -1px;               /*アンダーラインがaタグの下端から現れる*/
+    transform: scaleX(0);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
+    transform-origin: right top;
+    transition: transform ease 0.3s; /*変形の時間*/
+}
+
+nav a:hover::after {
+    transform-origin: left top;
+    transform: scaleX(1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+
+.nav-sns{
+    padding-top: 25px;
+    transition: opacity 0.3s;
+}
+
+.nav-sns img{
+    width: 40px;
+    height: 40px;
+}
+
+.nav-sns:hover{
+    opacity: 0.7;
+}
+
+/* ヘッダー下余白 */
+.left-margin{
+    margin-left: 120px;
+    overflow: hidden;
+}
+
+/* ハンバーガーボタン参照元
+https://125naroom.com/web/2958 */
+/*=============================
+.btn-trigger　空タグにボタンを作る記述
+=============================*/
+.hamburgerBtn{
+    z-index: 11;
+    display: none;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+}
+.btn-trigger {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+  .btn-trigger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    /* border-radius: 4px; */
+}
+  .btn-trigger, .btn-trigger span {
+    display: inline-block;
+    transition: all .5s;
+    box-sizing: border-box;
+}
+  .btn-trigger span:nth-of-type(1) {
+    top: 0;
+}
+  .btn-trigger span:nth-of-type(2) {
+    top: 12px;
+}
+  .btn-trigger span:nth-of-type(3) {
+    bottom: 0;
+}
+/*=============================
+#hamburgerBtn　クリック時の変形
+=============================*/
+#hamburgerBtn::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    content: '';
+    width: 40px;
+    height: 40px;
+    margin: -21px 0 0 -21px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: all .75s;
+}
+#hamburgerBtn.active span:nth-of-type(1) {
+    transform: translateY(11px) rotate(45deg);
+}
+#hamburgerBtn.active span:nth-of-type(2) {
+    left: 60%;
+    opacity: 0;
+    animation: active-btn-bar02 .8s forwards;
+}
+@-webkit-keyframes active-btn-bar02 {
+    100% {
+      height: 0;
+    }
+}
+@keyframes active-btn-bar02 {
+    100% {
+      height: 0;
+    }
+}
+#hamburgerBtn.active span:nth-of-type(3) {
+    transform: translateY(-11px) rotate(-45deg);
+  }
+#hamburgerBtn.active::after {
+    border: 1px solid #fff;
+}
+
+
+/* ------------------------
+    フッター
+------------------------ */
+footer{
+    padding: 15px 0;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+}
+
+footer address p{
+    font-size: 14px;
+}
+
+footer address p:first-child{
+    font-size: 18px;
+}
+
+footer p small{
+    font-size: 12px;
+}
+
+/* ------------------------
+    四角いボタン 文字20px
+------------------------ */
+.button1{
+    text-align: center;
+    width: 290px;
+}
+
+.button1 a{
+    font-size: 20px;
+    display: block;
+    line-height: 3;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    position: relative;
+    transition: .4s;
+}
+
+.button1 a::after{
+    content: "▲";
+    font-size: 18px;
+    position: absolute;
+    top: 3px;
+    right: 30px;
+    transform: rotate(90deg);
+}
+
+.button1 a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #fff;
+    transition: transform ease .4s;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.button1 a:hover{
+    color: #1a1a1a;
+}
+
+.button1 a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+/* ------------------------
+    四角いボタン 文字24px
+------------------------ */
+.button2{
+    text-align: center;
+    width: 290px;
+}
+
+.button2 a{
+    font-size: 24px;
+    display: block;
+    line-height: 2.5;
+    margin: 0 auto;
+    border: 1px solid #fff;
+    position: relative;
+    transition: ease .4s;
+}
+
+.button2 a::after{
+    content: "▲";
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    right: 30px;
+    transform: rotate(90deg);
+}
+
+.button2 a::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #fff;
+    transition: transform ease .4s;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+}
+
+.button2 a:hover{
+    color: #1a1a1a;
+    background-color: transparent;
+}
+
+.button2 a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+/* ------------------------
+    矢印ボタン
+------------------------ */
+.button3{
+    position: relative;
+    transition: all 0.3s;
+    display: inline-block;
+    width: 320px;
+}
+
+.button3::after{
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+    content: "";
+    display: block;
+    width: 310px;
+    height: 15px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: skew(45deg);
+    transition: all 0.3s;
+}
+
+.button3:hover{
+    text-shadow: 0 0 7px #fff;
+}
+
+.button3:hover::after{
+    animation: arrow-anim 0.7s ease forwards;
+}
+
+@keyframes arrow-anim {
+    0% {width: 0;}
+    100% {width: 310px;}
+}
+
+/* ------------------------
+    テキスト流れるやつ
+------------------------ */
+.text-slider{
+    width: 100vw;
+    height: 100px;
+    margin: 100px calc(50% - 50vw);
+    overflow: hidden;
+    display: flex;
+    gap: 50px;
+}
+.text-slider div {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 100px;
+    line-height: 1;
+    font-weight: bold;
+    color: #4d4d4d;
+    overflow: hidden;
+}
+
+.text-slider div::after{
+    content: "Les sucreries ne sont pas la seule chose dont les adultes ont besoin pour se détendre.";
+}
+
+.text-slider div:nth-child(odd) {
+animation: loop 200s -100s linear infinite;
+}
+
+.text-slider div:nth-child(even) {
+animation: loop2 200s linear infinite;
+}
+
+@keyframes loop {
+    0% {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+  
+@keyframes loop2 {
+    0% {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-200%);
+    }
+}
+
+/* ------------------------
+    背景テキスト円まわるやつ
+------------------------ */
+.bg-deco-circle{
+    position: relative;
+}
+
+.bg-deco-circle::before{
+    content: "";
+    width: 700px;
+    height: 700px;
+    background: url(../images/choco_deco_circletext_700x700.svg) center center / contain no-repeat;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 0 50%;
+    transform: translateX(-50%);
+    animation: rotation 60s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotation{
+    0%{ transform:rotate(360deg) translateX(-50%); }
+    100%{ transform:rotate(0) translateX(-50%);}
+}
+
+/* ------------------------
+    英文つき見出し
+------------------------ */
+.heading1 {
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 24px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.heading1::after {
+    font-family: "Allura", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    color: #4d4d4d;
+    position: absolute;
+    top: 0;
+    right: 10%;
+    z-index: -1;
+    transform: translate(50%,-10%) rotate(-10deg);
+}
+
+/* ------------------------
+    下層の大きい見出し
+------------------------ */
+.heading2{
+    padding: 90px 0 90px 70px;
+    width: 100%;
+    font-size: 60px;
+    line-height: 1;
+    text-shadow: 0 5px 7px #000;
+}
+
+/* ------------------------
+    レスポンシブ
+------------------------ */
+@media screen and (max-width:1200px){
+    .heading2{
+        background-size: contain !important;
+    }
+}
+
+@media screen and (max-width:1150px){
+    .inner1{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width:768px){
+    header{
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    h1{
+        margin-bottom: 0;
+    }
+
+    .heading2{
+        background-size: cover !important;
+        padding-left: 70px;
+        height: 240px;
+        font-size: 40px;
+    }
+
+    .hamburgerBtn{
+        display: block;
+    }
+
+    #nav-area{
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: -120px;
+        width: 120px;
+        height: 100vh;
+        padding-top: 120px;
+        transition: all 0.4s;
+    }
+
+    #nav-area.nav-open{
+        left: 0;
+    }
+
+    #navBgGray{
+        z-index: 9;
+        transition: all 0.4s;
+    }
+
+    #navBgGray.navBgGray-on{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .left-margin{
+        margin-left: 0;
+        margin-top: 82px;
+    }
+}
+
+@media screen and (max-width:350px){
+    .button1{
+        width: 270px;
+    }
+
+    .button2{
+        width: 270px;
+    }
+
+
+}
+
