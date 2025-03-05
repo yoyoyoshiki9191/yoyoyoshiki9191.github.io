@@ -405,6 +405,23 @@ body.appear #wrapper,body.appear #particles-js{
 
 @media screen and (max-width:768px){
 
+/* scroll */
+.scrolldown4 span{
+    /*描画位置*/
+	bottom:40px;
+}
+
+/* 矢印の描写 */
+.scrolldown4:before {
+    /*描画位置*/
+    bottom: 30px;
+}
+
+.scrolldown4:after{
+    /*描画位置*/
+	bottom:30px;
+}
+
 	/* news-slider */
 	.news-slider img {
 		max-width:40vw;
