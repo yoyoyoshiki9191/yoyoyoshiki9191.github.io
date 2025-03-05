@@ -278,7 +278,7 @@ header{
 	.sp_logo{
 		display: block;
 		position: absolute;
-		top: 70%;
+		top: 50%;
 		left:50%;
 		transform: translateY(-50%) translateX(-50%);
 		z-index: 997;
