@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映画『Hell's Runway』公式サイト</title>
+
+    <!-- ↓ faviconの読み込み -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon-180x180.png">
+    
+    <!-- はじめに共通css -->
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <!-- slick用のcss -->
+    <link rel="stylesheet" href="assets/js/slick/slick.css">
+
+    <!-- 最後にページ固有のcss -->
+    <link rel="stylesheet" href="assets/css/top.css">
+
+    <!-- ↓ ここにjQuery本体ファイルの読み込み -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ ここにslickのプラグインファイルの読み込み -->
+    <script src="assets/js/slick/slick.min.js"></script>
+
+    <!-- ↓ ここに自作jsファイルの読み込み -->
+    <script src="assets/js/top.js"></script>
+
+    <!-- ページのリロード時に一番上から表示 適用すると他のページから特定の場所へ飛べない -->
+    <!-- <script>
+        $(function() {
+            $('html,body').animate({ scrollTop: 0 }, '1');
+        });
+    </script> -->
+</head>
+
+<body>
+    <div class="loading">
+        <div class="shutter"><img src="assets/images/loading_516x282.png" alt="ローディングアニメーション" width="350" height="auto"></div>
+        <!-- <p class="loading-text">Loading...</p>
+        <div class="spinner"></div> -->
+    </div>
+
+    <!-- モーダルウィンドゥ設定 -->
+    <!-- オーバーレイ（半透明背景） -->
+    <div id="overlay" class="overlay"></div>
+
+    <div class="movie_overlay">
+        <div class="video-container">
+            <iframe class="iframe_1" width="560" height="315" src="https://www.youtube.com/embed/njjlhoCvv2w?si=-EyGKALBm0PgXAZx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <header>
+        <div class="flex">
+            <h1 class="logo">
+                <a href="#"><img src="assets/images/header_logo_75x35.svg" alt="映画のロゴ" width="75" height="35"></a>
+            </h1>
+            <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+            <input type="checkbox" id="navSet" class="nav-switch">
+            <label for="navSet" class="nav-burger"></label>
+            <nav class="navi">
+                <ul class="flex inner_1" id="hamburger_close">
+                    <li class="top"><a href="#">Top</a></li>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#story">Story</a></li>
+                    <li><a href="#cast">Cast</a></li>
+                    <li><a href="#staff">Staff</a></li>
+                    <li><a href="news/index.html">News</a></li>
+                    <li><a href="theaters/index.html">Theaters</a></li>
+                    <li><a href="gallery/index.html">Gallery</a></li>
+                    <li><a href="#trailer">Trailer</a></li>
+                    <li><a href="comment/index.html">Comment</a></li>
+                    <li class="x"><a href="#"><img src="assets/images/icon_x_100x100.png" alt="" width="30" height="30"></a></li>
+                    <li class="instagram"><a href="#"><img src="assets/images/icon_instagram_100x100.png" alt="" width="30" height="30"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="mv header_br">
+        <div class="mv_area_1">
+            <div class="inner_1">
+                <div class="item_1">
+                    <img src="assets/images/mv_tittle_853x172.svg" alt="タイトル" width="853" height="172">
+                </div>
+                <div class="item_2">
+                    <img src="assets/images/mv_catchphrase_98x320.svg" alt="キャッチフレーズ" width="98" height="320">
+                </div>
+                <div class="item_3">
+                    <img src="assets/images/mv_award_600x600.svg" alt="受賞した賞の紹介" width="150" height="150">
+                </div>
+                <div class="item_4">
+                    <img src="assets/images/mv_award__sp_876x132.svg" alt="受賞した賞の紹介 スマホ版" width="876" height="132">
+                </div>
+                <div class="item_5">
+                    <img src="assets/images/mv_catchphrase_216x66.svg" alt="キャッチフレーズ" width="216" height="66">
+                </div>
+                <div class="to_bottom">
+                    <a href="#slogan">
+                        <svg class="arrows">
+                            <path class="a1" d="M0 0 L30 32 L60 0"></path>
+                            <path class="a2" d="M0 20 L30 52 L60 20"></path>
+                            <path class="a3" d="M0 40 L30 72 L60 40"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="mv_area_2 inner_1">
+            <!-- <div class="flex">
+                <div class="group_1 flex">
+                    <div class="banner_1">
+                        <a href="comment/index.html"><img src="assets/images/bnr_comment_150x83.svg" alt="バナー1" width="100" height="55"></a>
+                    </div>
+                    <div class="banner_2">
+                        <a href="#"><img src="assets/images/bnr_bluray_150x83.svg" alt="バナー2" width="100" height="55"></a>
+                    </div>
+                </div>
+                <div class="group_2 flex">
+                    <div class="banner_3">
+                        <a href="gallery/index.html"><img src="assets/images/bnr_gallery_150x83.svg" alt="バナー3" width="100" height="55"></a>
+                    </div>
+                    <div class="banner_4">
+                        <a href="theaters/index.html"><img src="assets/images/bnr_theaters_150x83.svg" alt="バナー4" width="100" height="55"></a>
+                    </div>
+                </div>
+            </div> -->
+            <div class="item_6">
+                <img src="assets/images/mv_roadshow_922x82.svg" alt="4月14日公開" width="922" height="82">
+            </div>
+        </div>
+    </section>
+
+    <div id="info">
+        <div class="btns">
+            <div class="btn_theater">
+                <a href="theaters/index.html"><img src="assets/images/bnr_theaters_150x83.svg" alt="シアター情報"></a>
+            </div>
+            <div class="btn_theater">
+                <a href="gallery/index.html"><img src="assets/images/bnr_gallery_150x83.svg" alt="期間限定スペシャルフォト"></a>
+            </div>
+            <div class="btn_theater">
+                <a href="comment/index.html"><img src="assets/images/bnr_comment_150x83.svg" alt="著名人コメント"></a>
+            </div>
+            <div class="btn_theater">
+                <a href="#"><img src="assets/images/bnr_bluray_150x83.svg" alt="ブルーレイ発売日"></a>
+            </div>
+        </div>
+        <div id="trailer">
+            <div class="section_inner">
+                <div class="section_main">
+                    <div class="youtube_embed">
+                        <iframe id="embed_movie" frameborder="0" allowfullscreen="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" title="2025年1月3日(金)公開　『ビーキーパー』｜本予告" width="460" height="350" src="https://www.youtube.com/embed/njjlhoCvv2w?si=-EyGKALBm0PgXAZx"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <section id="trailer" class="banner_br">
+        <div class="iframe_wrapper">
+            <iframe src="https://www.youtube.com/embed/njjlhoCvv2w?si=-EyGKALBm0PgXAZx" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section> -->
+
+    <section id="slogan">
+        <div class="slogan_area_1">
+            <div class="inner_1 fadeUp_trigger">
+                <div class="item_1">
+                    <img src="assets/images/slogan_01_893x127.svg" alt="『ガールズ・オブ・サマー』のエミリー・ブラウン待望の最新作" width="893" height="127">
+                </div>
+                <div class="item_2">
+                    <img src="assets/images/slogan_02_881x127.svg" alt="煌びやかなモデル業界の闇を描く極上のサイコスリラー" width="881" height="127">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="intro">
+        <div class="intro_area_1">
+            <div class="inner_1 fadeUp_trigger">
+                <div class="item_1">
+                    <img src="assets/images/introduction_01_632x54.svg" alt="" width="632" height="54">
+                </div>
+                <div class="flex">
+                    <div class="item_2">
+                        <img src="assets/images/introduction_02_625x131.svg" alt="『ラスト・プロム』『デスティネーション』『アンダー・ザ・スカイ』B42製作" width="625" height="131">
+                    </div>
+                    <div class="text">
+                        『ぼくのかっこわるくて、いじわるで、大嫌いなおじ』で第85回アカデミー賞脚本賞、前作『ガールズ・オブ・サマー』で第76回金獅子賞(最高賞)を獲得し、いまや名実ともに世界を代表する映画監督のひとりとなったエミリー・ブラウン。<br>
+                        元はアクション女優として活躍していた彼女は、スタント事故をきっかけに2005年より監督業に専念。<br>
+                        クライムサスペンス、スペースオペラ、ラブロマンスと立て続けに複数のジャンル映画を製作し、常に新しいことに挑戦してきた。<br>
+                        <br>
+                        最新作では一転、唯一無二の永遠の美を追い求めるモデル業界での渦巻く欲望と夢見る少女たちがいかにして無慈悲かつ残酷に変貌していくのかを幻想的かつ煌びやかな映像で描き出すサイコスリラーに挑戦。<br>
+                        <br>
+                        映画スタジオは『アンダー・ザ・スカイ』が第90回アカデミー賞で計5部門を受賞したことで話題のB42製作。<br>
+                        今作ではエミリー・ブラウン初のダブル主演映画となる。<br>
+                        トップモデルを夢見る少女アン役には、『ラブ&ロック』シリーズのリンダ役で絶大な人気を博した、才能あふれる若き女優アニャ・ロバーツ＝ジョイが怪演！<br>
+                        さらにアンのルームメイトであり、事件の真相を追うヨナ役には、『グランド・バザール』で観光客をターゲットに荒稼ぎをする詐欺師を熱演したトーマシン・マッケンナが演じる。<br>
+                        <br>
+                        悪魔的デモニッシュな魅力で世界を虜にした『ヘルズ・ランウェイ』が今春、遂に日本にも解き放たれる─!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ★ 横スクロールアニメのための領域 ↓ -->
+    <div class="slider_area_1"></div>
+
+    <section id="story">
+        <div class="story_area_1">
+            <div class="inner_1 fadeUp_trigger">
+                <div class="item_1">
+                    <img src="assets/images/story_01_277x54.svg" alt="" width="277" height="54">
+                </div>
+                <div class="flex">
+                    <div class="item_2">
+                        <img src="assets/images/story_02_501x82.svg" alt="私、もっと刺激的で胸のときめく人生を送りたいの" width="501" height="82">
+                    </div>
+                    <div class="text">舞台はハリウッドスターや人気モデルが数多く暮らす、ロサンゼルス郊外の高級住宅地チェビオット・ヒルズ。<br>
+                        ここには全米から成功をめざす人々が集まり、熱気に満ちていた。<br>
+                        「私、もっと刺激的で胸のときめく人生を送りたいの」<br>
+                        漠然とそんな願望を抱いた若い田舎娘アンもその1人だった。<br>
+                        <br>
+                        彼女は誰もが目を奪われる純粋な美しさに恵まれており、その美貌はすぐに人々の目に止まった。<br>
+                        一流プロデューサーとしてモデル業界の中心に君臨するジェフのもとで働き始めたアンは、瞬く間に人気モデルとなる。<br>
+                        仲のいいルームメイトのヨナとも一緒に仕事をする機会が増え、順風満帆な日々が続くと思われていた。<br>
+                        <br>
+                        「アンはジェフと寝ている」突如、根も葉もない噂が広まりモデル業界に緊張が走る。<br>
+                        アンに対して、異常な嫉妬心を燃やすライバルたちが彼女を引きずりおろすために牙をむいたのだ。<br>
+                        負けず嫌いなアンもライバルたちと衝突し、苦しみながらも、着実に華やかなスターへの道を駆け上っていく。<br>
+                        次第にアン自身の中にも激しい野心が芽生え、究極の美のために手段を選ばなくなっていく。<br>
+                        <br>
+                        一方でヨナは、アンを陥れようとする犯人探しをしていく中、衝撃の事実を知ることとなる。<br>
+                        運命の糸がほつれ、絡み合い、やがて狂い始めるふたりは誰もが想像し得ない境地にたどり着く。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="productions">
+        <div class="productions_area_1">
+            <div class="inner_1 fadeUp_trigger">
+                <div class="item_1">
+                    <img src="assets/images/productions_591x136.svg" alt="" width="591" height="136">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- モーダルウィンドウ1 -->
+    <div class="modal_window" data-id="modalcast_1">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_1_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">アニャ・ロバーツ＝ジョイ as アン</p>
+                    <p class="modal_text">
+                        トップモデルを夢見る16歳の女の子。<br>
+                        おっとりした見た目とは裏腹に勝気な性格で、モデル業界で頭角を現していく。<br>
+                        <br>
+                        PROFILE<br>
+                        2006年、5人きょうだいの末っ子として米フロリダ州マイアミに生まれる。<br>
+                        幼少期をアルゼンチンとイギリスで過ごし、12歳で俳優を目指してニューヨークに渡る。<br>
+                        ストリート・モデルの創立者ベン・べイトマンに路上スカウトされモデル業をスタート。<br>
+                        2020年に俳優デビュー。翌年には主演映画『ポートフォリオ』で注目を浴び、ドラマ『ラブ&ロック』で大ブレイク。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ2 -->
+    <div class="modal_window" data-id="modalcast_2">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_2_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">トーマシン・マッケンナ as ヨナ</p>
+                    <p class="modal_text">
+                        キューバからの移民で、アンのルームメイト。<br>
+                        大人しいが芯の強い女性で、都会の空気に慣れないアンをサポートする。<br>
+                        <br>
+                        PROFILE<br>
+                        イスラエルの母とニュージーランドの父を持つ女優。<br>
+                        ミス・イスラエルのタイトルを獲得し、2010年度ミス・ユニバース世界大会に祖国を代表して参加した。<br>
+                        その後すぐに演技キャリアをスタートさせ、イスラエルのTVシリーズ『boycott』で主役を演じた。<br>
+                        2019年、初めてアメリカ映画に進出し、『フォクシー』でマイケル・フォスターを誘惑するハルを演じ注目を浴び、記憶に新しい『グランド・バザール』では老婆のメイクが一躍話題になった。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ3 -->
+    <div class="modal_window" data-id="modalcast_3">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_3_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">エマ・ロック as ソフィア</p>
+                    <p class="modal_text">
+                        アンの同期で美しいブロンドヘアーの持ち主。<br>
+                        自信家でプライドが高く、自分より売れるアンを疎ましく思い嫌がらせをする。<br>
+                        <br>
+                        PROFILE<br>
+                        2004年、アメリカ、ニューヨーク州生まれ。<br>
+                        幼い頃より習っていたバレエの道を目指したが、膝の怪我で断念。<br>
+                        その後、女優を目指してコロンビア大学で演劇を学ぶ。<br>
+                        マンハッタンのブレイクダンス集団「ポップ・ステップ・ブリゲイド」の舞台に立ち18年からは人気ダンス番組「ブレイキン・ナイト」に出演し、好評を博す。<br>
+                        『オーマイゴッドファーザー3』では本人役でカメオ出演し、その後『ダンス!ダンス!ダンス!』では主要キャストに抜擢される。<br>
+                        アニャとは2年前に公開した『エミリー、暖かい色』でも共演。<br>
+                        プライベートでも仲がいいことで知られている。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ4 -->
+    <div class="modal_window" data-id="modalcast_4">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_4_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">リリー・ジャスミン as エリザベス</p>
+                    <p class="modal_text">
+                        スキャンダルで仕事を失った落ち目のモデル。<br>
+                        仕事が軌道に乗り出したころ、ぽっと出のアンに仕事を奪われ、対立を深めていく。<br>
+                        <br>
+                        PROFILE<br>
+                        アメリカの俳優でプロデューサー。<br>
+                        国内外を問わず、テレビや映画、舞台で常に重要な役を演じている。<br>
+                        2018年、全6話のNetfilxオリジナル・ドラマ『ショコラティエ』では製作総指揮も務めた。<br>
+                        現在、ロマンチック・コメディー『スクール・オブ・アクシデント』に出演中で、アナ・デ・アリマス、ティモシー・シャメと共演している。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ5 -->
+    <div class="modal_window" data-id="modalcast_5">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_5_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">ジャッキー・チャオ as 美琳(メイリン)</p>
+                    <p class="modal_text">
+                        女優業も兼ねる生真面目な中国人モデル。<br>
+                        急速に成長するアンに焦りと苛立ちを募らせる。<br>
+                        <br>
+                        PROFILE<br>
+                        1996年、中国安徽省出身。<br>
+                        中国ではリンユー、チュンイェン、の2人と並び中国三大美女と呼ばれている。<br>
+                        TVドラマ『泡沫姫』で演じた役名「雪蘭」（シュェラン）の愛称でも親しまれる。<br>
+                        女優のほか歌手としても活動している。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ6 -->
+    <div class="modal_window" data-id="modalcast_6">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_6_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">サラ・デルヴィーニュ as ミア</p>
+                    <p class="modal_text">
+                        ジェフの妻でカリスマモデル。<br>
+                        次第にアンの魅力に取りつかれていく夫をみて、心穏やかではない状態に。<br>
+                        <br>
+                        PROFILE<br>
+                        1992年、ロンドン出身。<br>
+                        バーバリー、シャネルなどのキャンペーンやランウェイでモデルとして活躍。<br>
+                        インスタグラムのフォロワー数3,200万人という大人気のファッションアイコンとなる。<br>
+                        2010年にはマシュー・ホーン監督の『トラベラー』でジェイク・マンホールと共演し、映画デビュー。<br>
+                        KCコミックスのアクション大作『ボム・ボマー』ではスパイのイェレナを妖艶に演じた。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ7 -->
+    <div class="modal_window" data-id="modalcast_7">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_7_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">エノーラ・パーネル as ケイト</p>
+                    <p class="modal_text">
+                        ミステリアスな雰囲気を醸し出すモデル。<br>
+                        薬物中毒者で周囲からは変人扱いされている。<br>
+                        <br>
+                        PROFILE<br>
+                        ロサンゼルス生まれで、父は名カメラマンのロブ・パーネル、母は俳優のキャサリン・パーネルという芸能一家に育つ。<br>
+                        15歳のときTVのコメディ番組でブレイクし、『ハイスクール』でのスクリーンデビューを機に大学を辞め、俳優業に専念。<br>
+                        恋愛SFコメディ「タイムラブマシーン」で国際的な注目を集め、主人公を演じたシットコム「ガールズバンド」は6シーズン続く長寿ドラマとなった。<br>
+                        筋金入りのゲーマーとしても有名で、人気FPS『エージェント』ではアナウンス役の声を担当している。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ8 -->
+    <div class="modal_window" data-id="modalcast_8">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_8_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">マーゴット・ロビンソン as ナタリー</p>
+                    <p class="modal_text">
+                        第一線で活躍するトップモデル。<br>
+                        モデル・オブ・ザ・イヤーにも輝いたことがあり、<br>
+                        アンがモデルを目指すきっかけとなった存在。<br>
+                        <br>
+                        PROFILE<br>
+                        1985年、オーストラリア生まれ。<br>
+                        大学卒業後、女優の道を目指し、1999年にデビュー。<br>
+                        オーストラリアのTVドラマ「countryside（原題）」で国内人気を獲得した後、『ドライフラワー』で、米国進出を果たす。<br>
+                        その後『アリスタ ～スターへの道～』のアリスタ役で人気スターとなり、2017年には『コーラル・ウィンドウ』でアカデミー賞®主演女優賞にノミネートされ、実力派としても認められる。<br>
+                        近年の映画出演作に『バルーン』、『ファミリー・ミーティング』などがある。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ9 -->
+    <div class="modal_window" data-id="modalcast_9">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_9_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">ジョシュ・ハート as トミー</p>
+                    <p class="modal_text">
+                        ハンサムな男性モデル。<br>
+                        プレイボーイで女性トラブルが絶えない。<br>
+                        短絡思考の男で、エリザベスに利用されてしまう。<br>
+                        <br>
+                        PROFILE<br>
+                        ニュージーランドの俳優。<br>
+                        2021年に、ニュージーランドの大手制作会社サウス・パシフィック・ピクチャーズが手掛けるドラマ『ブロークンムーン』に起用され、ハワード役を演じた。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ10 -->
+    <div class="modal_window" data-id="modalcast_10">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_cast_10_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">ディン・デハーン as ジェフ</p>
+                    <p class="modal_text">
+                        アンの魅力を見出した敏腕プロデューサー。<br>
+                        <br>
+                        PROFILE<br>
+                        オーストラリアの俳優、脚本、映画監督。<br>
+                        テレビや舞台で活躍を続け、国内外の20本以上の映画にも出演している。<br>
+                        実話を元にした犯罪サスペンス『セキュリティメンテナンス』に出演し、この作品は第70回カンヌ国際映画祭のある視点部門でプレミア上映された。<br>
+                        現在はステラ・マッカートニーの顔として同社の広告キャンペーンにも登場している。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="cast">
+        <div class="cast_area_1">
+            <div class="inner_1">
+                <div class="item_1 fadeUp_trigger">
+                    <img src="assets/images/cast_207x54.svg" alt="" width="207" height="54">
+                </div>
+                <div class="flex group_1 fadeUp_trigger">
+                    <div class="cast_1 flash js_open" data-id="cast_1">
+                        <a href="#"><img src="assets/images/image_cast_1_640x640.svg" alt="俳優の写真" width="320" height="320"></a>
+                    </div>
+                    <div class="cast_2 flash js_open" data-id="cast_2">
+                        <a href="#"><img src="assets/images/image_cast_2_640x640.svg" alt="俳優の写真" width="320" height="320"></a>
+                    </div>
+                </div>
+                <div class="flex group_2">
+                    <div class="cast_3 flash fadeUp_trigger delay_1 js_open" data-id="cast_3">
+                        <a href="#"><img src="assets/images/image_cast_3_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                    <div class="cast_4 flash fadeUp_trigger delay_2 js_open" data-id="cast_4">
+                        <a href="#"><img src="assets/images/image_cast_4_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                    <div class="cast_5 flash fadeUp_trigger delay_3 js_open" data-id="cast_5">
+                        <a href="#"><img src="assets/images/image_cast_5_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                    <div class="cast_6 flash fadeUp_trigger delay_4 js_open" data-id="cast_6">
+                        <a href="#"><img src="assets/images/image_cast_6_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                </div>
+                <div class="flex group_3">
+                    <div class="cast_7 flash fadeUp_trigger delay_5 js_open" data-id="cast_7">
+                        <a href="#"><img src="assets/images/image_cast_7_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                    <div class="cast_8 flash fadeUp_trigger delay_6 js_open" data-id="cast_8">
+                        <a href="#"><img src="assets/images/image_cast_8_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                    <div class="cast_9 flash fadeUp_trigger delay_7 js_open" data-id="cast_9">
+                        <a href="#"><img src="assets/images/image_cast_9_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                    <div class="cast_10 flash fadeUp_trigger delay_8 js_open" data-id="cast_10">
+                        <a href="#"><img src="assets/images/image_cast_10_640x640.svg" alt="俳優の写真" width="250" height="250"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ★ 横スクロールアニメのための領域 ↓ -->
+    <div class="slider_area_2"></div>
+
+    <!-- ★ パララックス画像 ↓ -->
+    <div class="parallax_bg"></div>
+    
+    <!-- モーダルウィンドウ11 -->
+    <div class="modal_window" data-id="modaldirector_1">
+        <div class="flex_box">
+            <div class="flex">
+                <div class="modal_img"><img src="assets/images/image_director_1_640x640.svg" alt="俳優の写真" width="400" height="400"></div>
+                <div class="flex">
+                    <p class="modal_intro">エミリー・ブラウン</p>
+                    <p class="modal_text">
+                        PROFILE<br>
+                        1988年頃から舞台に出演し始め、1996年、『ストレートフラッシュ』で映画デビューし、大ヒット映画『コールサイン』でハリウッド進出を果たしブレイク。<br>
+                        2000年頃からニューヨークのスクール・オブ・ビジュアル・アーツで映画製作を学び、2003年に『ツアーガイド』で長編映画監督デビュー。<br>
+                        『ぼくのかっこわるくて、いじわるで、大嫌いなおじ』で第85回アカデミー賞脚本賞を受賞し、『ガールズ・オブ・サマー』で、メディアから「この10年で最も素晴らしいラブ・ロマンス映画の1本」と高く評価される。<br>
+                        現在は危険な陰謀に巻き込まれたスタントマンを描いたリアルかつ斬新なアクション映画『Plummet （原題）』を撮影中。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ12 -->
+    <div class="modal_window" data-id="modalstaff_1">
+        <div class="flex_box">
+            <div class="flex">
+                <p class="modal_intro">ウォーリー・フィクサー</p>
+                <p class="modal_text">
+                    PROFILE<br>
+                    ほにゃほにゃほにゃ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ13 -->
+    <div class="modal_window" data-id="modalstaff_2">
+        <div class="flex_box">
+            <div class="flex">
+                <p class="modal_intro">ヨハネス・ヨハンソン</p>
+                <p class="modal_text">
+                    PROFILE<br>
+                    ほにゃほにゃほにゃ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ14 -->
+    <div class="modal_window" data-id="modalstaff_3">
+        <div class="flex_box">
+            <div class="flex">
+                <p class="modal_intro">スーザン・ヴォーグ</p>
+                <p class="modal_text">
+                    PROFILE<br>
+                    ほにゃほにゃほにゃ</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- モーダルウィンドウ15 -->
+    <div class="modal_window" data-id="modalstaff_4">
+        <div class="flex_box">
+            <div class="flex">
+                <p class="modal_intro">ジェシー・ビーヴァン</p>
+                <p class="modal_text">
+                    PROFILE<br>
+                    ほにゃほにゃほにゃ</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="staff">
+        <div class="staff_area_1">
+            <div class="inner_1 fadeUp_trigger">
+                <div class="item_1">
+                    <img src="assets/images/staff_257x54.svg" alt="" width="257" height="54">
+                </div>
+                <div class="flex">
+                    <div class="group_1 flex child_1">
+                        <div class="staff_1 js_open" data-id="staff_1">
+                            <a href="#"><img src="assets/images/staff_01_256x73.svg" alt="撮影担当の紹介" width="256" height="73"></a>
+                        </div>
+                        <div class="staff_2 js_open" data-id="staff_2">
+                            <a href="#"><img src="assets/images/staff_02_243x75.svg" alt="音楽担当の紹介" width="243" height="75"></a>
+                        </div>
+                    </div>
+                    <div class="director_1 child_2 js_open" data-id="director_1">
+                        <a href="#"><img src="assets/images/director_262x283.svg" alt="監督の写真" width="262" height="283"></a>
+                    </div>
+                    <div class="group_2 flex child_3">
+                        <div class="staff_3 js_open" data-id="staff_3">
+                            <a href="#"><img src="assets/images/staff_03_215x74.svg" alt="美術担当の紹介" width="215" height="74"></a>
+                        </div>
+                        <div class="staff_4 js_open" data-id="staff_4">
+                            <a href="#"><img src="assets/images/staff_04_244x75.svg" alt="衣装デザイナー担当の紹介" width="244" height="75"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="announce">
+            <img src="assets/images/footer_844x72.svg" alt="" width="844" height="72">
+        </div>
+        <!-- <div class="flex">
+            <div class="x">
+                <a href="#"><img src="assets/images/icon_x_100x100.png" alt="" width="30" height="30"></a>
+            </div>
+            <div class="instagram">
+                <a href="#"><img src="assets/images/icon_instagram_100x100.png" alt="" width="30" height="30"></a>
+            </div>
+        </div> -->
+        <p class="copyright"><small>&copy;2025 CINEMA RHYTHM PICTURES, LLC. All Rights Reserved.</small></p>
+    </footer>
+
+    <div class="to-top">
+        <a href="#"><img src="assets/images/button_top_100x102.svg" alt="トップに戻るボタン" width="100" height="102"></a>
+    </div>
+</body>
+</html>

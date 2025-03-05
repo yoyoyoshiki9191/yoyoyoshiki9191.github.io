@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映画『Hell's Runway』公式サイト-Gallery</title>
+
+    <!-- ↓ faviconの読み込み -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon-180x180.png">
+    
+    <!-- はじめに共通css -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- slick用のcss -->
+    <link rel="stylesheet" href="../assets/js/slick/slick.css">
+
+    <!-- 最後にページ固有のcss -->
+    <link rel="stylesheet" href="../assets/css/gallery.css">
+
+    <!-- ↓ ここにjQuery本体ファイルの読み込み -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ ここにslickのプラグインファイルの読み込み -->
+    <script src="../assets/js/slick/slick.min.js"></script>
+
+    <!-- ↓ ここに自作jsファイルの読み込み -->
+    <script src="../assets/js/top.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="flex">
+            <h1 class="logo">
+                <a href="../index.html"><img src="../assets/images/header_logo_75x35.svg" alt="映画のロゴ" width="75" height="35"></a>
+            </h1>
+            <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+            <input type="checkbox" id="navSet" class="nav-switch">
+            <label for="navSet" class="nav-burger"></label>
+            <nav class="navi">
+                <ul class="flex inner_1" id="hamburger_close">
+                    <li><a href="../index.html#intro">Introduction</a></li>
+                    <li><a href="../index.html#story">Story</a></li>
+                    <li><a href="../index.html#cast">Cast</a></li>
+                    <li><a href="../index.html#staff">Staff</a></li>
+                    <li><a href="../news/index.html">News</a></li>
+                    <li><a href="../theaters/index.html">Theaters</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="../index.html#trailer">Trailer</a></li>
+                    <li><a href="../comment/index.html">Comment</a></li>
+                    <li class="x"><a href="#"><img src="../assets/images/icon_x_100x100.png" alt="" width="30" height="30"></a></li>
+                    <li class="instagram"><a href="#"><img src="../assets/images/icon_instagram_100x100.png" alt="" width="30" height="30"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="gallery header_br">
+        <div class="gallery_area_1">
+            <div class="slider">
+                <div><img src="../assets/images/gallery_mv_1280x820_01.png" alt="メインビジュアル" width="100%"></div>
+                <div><img src="../assets/images/gallery_mv_1280x820_02.png" alt="メインビジュアル" width="100%"></div>
+                <div><img src="../assets/images/gallery_mv_1280x820_03.png" alt="メインビジュアル" width="100%"></div>
+            </div>
+            <div class="neon">
+                <i class="red delay">G</i>
+                <i class="gre">A</i>
+                <i class="gre">L</i>
+                <i class="red">L</i>
+                <i class="red delay">E</i>
+                <i class="gre">R</i>
+                <i class="red">Y</i>
+            </div>
+        </div>
+    </section>
+
+    <!-- モーダルウィンドゥ設定 -->
+    <!-- オーバーレイ（半透明背景） -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- モーダルウィンドゥ設定 -->
+    <!-- オーバーレイ（半透明背景） -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- モーダルウィンドウ1 -->
+    <div class="modal_window" data-id="modalphoto_01">
+        <div class="modal_img"><img class="modal_img_1" src="../assets/images/gallery_photo_01.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ2 -->
+    <div class="modal_window" data-id="modalphoto_02">
+        <div class="modal_img"><img class="modal_img_2" src="../assets/images/gallery_photo_02.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ3 -->
+    <div class="modal_window" data-id="modalphoto_03">
+        <div class="modal_img"><img class="modal_img_3" src="../assets/images/gallery_photo_03.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ4 -->
+    <div class="modal_window" data-id="modalphoto_04">
+        <div class="modal_img"><img class="modal_img_4" src="../assets/images/gallery_photo_04.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ5 -->
+    <div class="modal_window" data-id="modalphoto_05">
+        <div class="modal_img"><img class="modal_img_5" src="../assets/images/gallery_photo_05.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ6 -->
+    <div class="modal_window" data-id="modalphoto_06">
+        <div class="modal_img"><img class="modal_img_6" src="../assets/images/gallery_photo_06.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ7 -->
+    <div class="modal_window" data-id="modalphoto_07">
+        <div class="modal_img"><img class="modal_img_7" src="../assets/images/gallery_photo_07.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ8 -->
+    <div class="modal_window" data-id="modalphoto_08">
+        <div class="modal_img"><img class="modal_img_8" src="../assets/images/gallery_photo_08.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ9 -->
+    <div class="modal_window" data-id="modalphoto_09">
+        <div class="modal_img"><img class="modal_img_9" src="../assets/images/gallery_photo_09.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ10 -->
+    <div class="modal_window" data-id="modalphoto_10">
+        <div class="modal_img"><img class="modal_img_10" src="../assets/images/gallery_photo_10.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ11 -->
+    <div class="modal_window" data-id="modalphoto_11">
+        <div class="modal_img"><img class="modal_img_11" src="../assets/images/gallery_photo_11.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ12 -->
+    <div class="modal_window" data-id="modalphoto_12">
+        <div class="modal_img"><img class="modal_img_12" src="../assets/images/gallery_photo_12.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ13 -->
+    <div class="modal_window" data-id="modalphoto_13">
+        <div class="modal_img"><img class="modal_img_13" src="../assets/images/gallery_photo_13.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ14 -->
+    <div class="modal_window" data-id="modalphoto_14">
+        <div class="modal_img"><img class="modal_img_14" src="../assets/images/gallery_photo_14.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <!-- モーダルウィンドウ15 -->
+    <div class="modal_window" data-id="modalphoto_15">
+        <div class="modal_img"><img class="modal_img_15" src="../assets/images/gallery_photo_15.jpg" alt="場面写真" width="1000" height="auto"></div>
+    </div>
+
+    <section class="photo">
+        <div class="photo_area_1">
+            <div class="inner_1">
+                <div class="flex">
+                    <div class="item_1 js_open" data-id="photo_01">
+                        <a href="#"><img src="../assets/images/gallery_photo_01.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_2 js_open" data-id="photo_02">
+                        <a href="#"><img src="../assets/images/gallery_photo_02.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_3 js_open" data-id="photo_03">
+                        <a href="#"><img src="../assets/images/gallery_photo_03.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="item_4 js_open" data-id="photo_04">
+                        <a href="#"><img src="../assets/images/gallery_photo_04.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_5 js_open" data-id="photo_05">
+                        <a href="#"><img src="../assets/images/gallery_photo_05.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_6 js_open" data-id="photo_06">
+                        <a href="#"><img src="../assets/images/gallery_photo_06.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="item_7 js_open" data-id="photo_07">
+                        <a href="#"><img src="../assets/images/gallery_photo_07.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_8 js_open" data-id="photo_08">
+                        <a href="#"><img src="../assets/images/gallery_photo_08.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_9 js_open" data-id="photo_09">
+                        <a href="#"><img src="../assets/images/gallery_photo_09.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="item_10 js_open" data-id="photo_10">
+                        <a href="#"><img src="../assets/images/gallery_photo_10.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_11 js_open" data-id="photo_11">
+                        <a href="#"><img src="../assets/images/gallery_photo_11.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_12 js_open" data-id="photo_12">
+                        <a href="#"><img src="../assets/images/gallery_photo_12.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="item_13 js_open" data-id="photo_13">
+                        <a href="#"><img src="../assets/images/gallery_photo_13.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_14 js_open" data-id="photo_14">
+                        <a href="#"><img src="../assets/images/gallery_photo_14.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                    <div class="item_15 js_open" data-id="photo_15">
+                        <a href="#"><img src="../assets/images/gallery_photo_15.jpg" alt="写真" width="300" height="300"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="announce">
+            <img src="../assets/images/footer_844x72.svg" alt="" width="844" height="72">
+        </div>
+        <!-- <div class="flex">
+            <div class="x">
+                <a href="#"><img src="../assets/images/icon_x_100x100.png" alt="" width="100" height="100"></a>
+            </div>
+            <div class="instagram">
+                <a href="#"><img src="../assets/images/icon_instagram_100x100.png" alt="" width="100" height="100"></a>
+            </div>
+        </div> -->
+        <p class="copyright"><small>&copy;2025 CINEMA RHYTHM PICTURES, LLC. All Rights Reserved.</small></p>
+    </footer>
+    
+    <div class="to-top">
+        <a href="#"><img src="../assets/images/button_top_100x102.svg" alt="トップに戻るボタン" width="100" height="102"></a>
+    </div>
+
+</body>
+</html>

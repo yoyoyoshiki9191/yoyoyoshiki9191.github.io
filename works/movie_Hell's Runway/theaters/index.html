@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>映画『Hell's Runway』公式サイト-劇場情報</title>
+
+    <!-- ↓ faviconの読み込み -->
+    <link rel="icon" href="../favicon.ico">
+    <link rel="apple-touch-icon" href="../apple-touch-icon-180x180.png">
+    
+    <!-- はじめに共通css -->
+    <link rel="stylesheet" href="../assets/css/common.css">
+
+    <!-- slick用のcss -->
+    <link rel="stylesheet" href="../assets/js/slick/slick.css">
+
+    <!-- 最後にページ固有のcss -->
+    <link rel="stylesheet" href="../assets/css/theater.css">
+
+    <!-- ↓ ここにjQuery本体ファイルの読み込み -->
+    <script src="../assets/js/jquery-3.7.1.min.js"></script>
+
+    <!-- ↓ ここにslickのプラグインファイルの読み込み -->
+    <script src="../assets/js/slick/slick.min.js"></script>
+
+    <!-- ↓ ここに自作jsファイルの読み込み -->
+    <script src="../assets/js/top.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="flex">
+            <h1 class="logo">
+                <a href="../index.html"><img src="../assets/images/header_logo_75x35.svg" alt="映画のロゴ" width="75" height="35"></a>
+            </h1>
+            <!-- ↓　ここにハンバーガーボタンのコードを設置　↓ -->
+            <input type="checkbox" id="navSet" class="nav-switch">
+            <label for="navSet" class="nav-burger"></label>
+            <nav class="navi">
+                <ul class="flex inner_1" id="hamburger_close">
+                    <li><a href="../index.html#intro">Introduction</a></li>
+                    <li><a href="../index.html#story">Story</a></li>
+                    <li><a href="../index.html#cast">Cast</a></li>
+                    <li><a href="../index.html#staff">Staff</a></li>
+                    <li><a href="../news/index.html">News</a></li>
+                    <li><a href="#">Theaters</a></li>
+                    <li><a href="../gallery/index.html">Gallery</a></li>
+                    <li><a href="../index.html#trailer">Trailer</a></li>
+                    <li><a href="../comment/index.html">Comment</a></li>
+                    <li class="x"><a href="#"><img src="../assets/images/icon_x_100x100.png" alt="" width="30" height="30"></a></li>
+                    <li class="instagram"><a href="#"><img src="../assets/images/icon_instagram_100x100.png" alt="" width="30" height="30"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="theater">
+        <div class="header_br inner_1">
+            <h2>Theater<span>劇場情報</span></h2>
+            <div class="banner_img">
+                <img src="../assets/images/theater_logo_874x222.svg" alt="映画『Hell's Runway』劇場情報" width="100%"/>
+            </div>
+            <div class="tikect_img">
+                <img src="../assets/images/theater_ticket_800x80.svg" alt="ムビチケの広告" width="100%" height="80">
+            </div>
+            <div class="attention_1">
+            ※ 今後変更になることがありますので、ご了承下さい。<br>
+            ※ 上映期間・上映時間等の詳細は直接劇場にお問い合わせ下さい。</div>
+            <div class="attention_2">※1/30 現在</div>
+            <div class="local_navi">
+                <a href="#item_1">関東</a>｜<a href="#item_2">東海</a>｜<a href="#item_3">近畿</a>｜<a href="#item_4">九州</a>
+            </div>
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr id="item_1">
+                        <th class="t_area">地域</th>
+                        <th class="t_theater">劇場名</th>
+                        <th class="t_date">上映日付</th>
+                        <th class="t_8cam">備考</th></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">東京</td><td class="t_n">
+                            <a href="https://www.smt-cinema.com/site/marunouchi/index.html" target="_blank">丸ノ内ピカデリー</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">Dolby cinema版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">東京</td><td class="t_n">
+                                <a href="https://ttcg.jp/human_yurakucho/" target="_blank">ヒューマントラストシネマ有楽町</a>
+                            </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note"></td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">東京</td><td class="t_n">
+                                <a href="https://qualite.musashino-k.jp/" target="_blank">新宿シネマカリテ</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">東京</td><td class="t_n">
+                                <a href="https://hlo.tohotheater.jp/net/schedule/081/TNPI2000J01.do" target="_blank">TOHOシネマズ 日比谷</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note">IMAX版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">東京</td><td class="t_n">
+                                <a href="https://www.unitedcinemas.jp/toyosu/index.html" target="_blank">ユナイテッド・シネマ豊洲</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">東京</td><td class="t_n">
+                                <a href="https://www.unitedcinemas.jp/odaiba/index.html" target="_blank">ユナイテッド・シネマ アクアシティお台場</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note">ScreenX版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">千葉</td><td class="t_n">
+                                <a href="https://www.unitedcinemas.jp/makuhari/index.html" target="_blank">ユナイテッド・シネマ幕張</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note">4DX版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">千葉</td><td class="t_n">
+                                <a href="https://hlo.tohotheater.jp/net/schedule/018/TNPI2000J01.do" target="_blank">TOHOシネマズ ららぽーと船橋</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">神奈川</td><td class="t_n">
+                            <a href="https://tjoy.jp/dolbycinema/" target="_blank">T・ジョイ横浜</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">Dolby cinema版上映</td></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">埼玉</td><td class="t_n">
+                            <a href="https://www.smt-cinema.com/dolby/" target="_blank">MOVIXさいたま</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">Dolby cinema版上映</td></tr>
+                </table>
+
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr id="item_2">
+                        <th class="t_area">地域</th>
+                        <th class="t_theater">劇場名</th>
+                        <th class="t_date">上映日付</th>
+                        <th class="t_8cam">備考</th></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">愛知</td><td class="t_n">
+                            <a href="http://midland-sq-cinema-dolby.jp/" target="_blank">ミッドランドスクエアシネマ</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">Dolby cinema版上映</td></tr>
+                    <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">愛知</td><td class="t_n">
+                            <a href="https://nk-neu.com/" target="_blank">ナゴヤキネマ・ノイ</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note"></td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">静岡</td><td class="t_n">
+                                <a href="https://www.cinemasunshine.co.jp/theater/lalaportnumazu/" target="_blank">シネマサンシャインららぽーと沼津</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note">IMAX版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">岐阜</td><td class="t_n">
+                                <a href="https://theater.aeoncinema.com/theaters/kakamigahara/" target="_blank">イオンシネマ各務原</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                </table>
+                
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr id="item_3">
+                        <th class="t_area">地域</th>
+                        <th class="t_theater">劇場名</th>
+                        <th class="t_date">上映日付</th>
+                        <th class="t_8cam">備考</th></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">大阪</td><td class="t_n">
+                            <a href="https://tjoy.jp/dolbycinema/" target="_blank">梅田ブルク</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">Dolby cinema版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">大阪</td><td class="t_n">
+                                <a href="https://www.aeoncinema.com/cinema/shijonawate/" target="_blank">イオンシネマ四條畷</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note">IMAX版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">大阪</td><td class="t_n">
+                                <a href="https://ttcg.jp/ttcg_umeda/" target="_blank">テアトル梅田</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">京都</td><td class="t_n">
+                            <a href="https://www.smt-cinema.com/dolby/" target="_blank">MOVIX京都</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">Dolby cinema版上映</td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">京都</td><td class="t_n">
+                                <a href="https://kyoto.uplink.co.jp/" target="_blank">アップリンク京都</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">京都</td><td class="t_n">
+                                <a href="https://coconkarasuma.com/shoplist/kyotocinema/" target="_blank">京都シネマ</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">兵庫</td><td class="t_n">
+                                <a href="http://www.palcinema.net/" target="_blank">パルシネマしんこうえん</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td></tr>
+                </table>
+
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr id="item_4">
+                        <th class="t_area">地域</th>
+                        <th class="t_theater">劇場名</th>
+                        <th class="t_date">上映日付</th>
+                        <th class="t_8cam">備考</th></tr>
+                        <tr class="dboder">
+                        <td class="Prefecture" rowspan="1">福岡</td><td class="t_n">
+                            <a href="https://tjoy.jp/dolbycinema/" target="_blank">T・ジョイ博多</a>
+                        </td>
+                        <td class="t_d">4月14日</td>
+                        <td class="note">ドルビーシネマ版上映</td>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">福岡</td><td class="t_n">
+                                <a href="https://www.aeoncinema.com/cinema/fukuoka/" target="_blank">イオンシネマ福岡</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note">IMAX版上映</td>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">福岡</td><td class="t_n">
+                                <a href="https://kinocinema.jp/tenjin/" target="_blank">kino cinéma</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">佐賀</td><td class="t_n">
+                                <a href="http://ciema.info/movie/" target="_blank">シアター・シエマ</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td>
+                        <tr class="dboder">
+                            <td class="Prefecture" rowspan="1">熊本</td><td class="t_n">
+                                <a href="https://denkikan.com/" target="_blank">Denkikan</a>
+                            </td>
+                            <td class="t_d">4月14日</td>
+                            <td class="note"></td>
+                    </tr>
+                </table>
+            <div class="am"><a href="#" class="back_button">TOP</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="announce">
+            <img src="../assets/images/footer_844x72.svg" alt="" width="844" height="72">
+        </div>
+        <!-- <div class="flex">
+            <div class="x">
+                <a href="#"><img src="../assets/images/icon_x_100x100.png" alt="" width="100" height="100"></a>
+            </div>
+            <div class="instagram">
+                <a href="#"><img src="../assets/images/icon_instagram_100x100.png" alt="" width="100" height="100"></a>
+            </div>
+        </div> -->
+        <p class="copyright"><small>&copy;2025 CINEMA RHYTHM PICTURES, LLC. All Rights Reserved.</small></p>
+    </footer>
+
+</body>
+</html>
