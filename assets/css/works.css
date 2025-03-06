@@ -83,10 +83,10 @@
 @media screen and (max-width:768px){
 
 	#list img{
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
 		object-fit: cover; /* width, heightといっしょに使います */
-		max-width: 200px;
+		max-width: 150px;
 	}
 
 	.works_hover p{
