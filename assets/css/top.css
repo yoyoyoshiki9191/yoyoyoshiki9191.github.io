@@ -405,6 +405,10 @@ body.appear #wrapper,body.appear #particles-js{
 
 @media screen and (max-width:768px){
 
+#splash_logo img {
+	width:200px;
+}
+
 /* scroll */
 .scrolldown4 span{
     /*描画位置*/
