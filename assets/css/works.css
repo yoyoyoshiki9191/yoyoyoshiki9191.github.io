@@ -90,9 +90,10 @@
 	}
 
 	.works_hover p{
-		margin: 0 auto;
+		/* margin: 0 auto;
 		line-height: 1rem;
 		font-size: 0.9rem;
-		width: 150px;
+		width: 150px; */
+		display: none;
 	}
 }
