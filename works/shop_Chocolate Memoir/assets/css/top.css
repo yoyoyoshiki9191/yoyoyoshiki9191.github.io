@@ -40,35 +40,13 @@
 
 }
 
-.mv-area .catch_1{
+.mv-area .catch{
     font-size: 40px;
     line-height: 2;
     text-shadow: 0 5px 7px #000;
     text-align: right;
     position: absolute;
     top: 15%;
-    right: 0;
-    z-index: 1;
-}
-
-.mv-area .catch_2{
-    font-size: 40px;
-    line-height: 2;
-    text-shadow: 0 5px 7px #000;
-    text-align: right;
-    position: absolute;
-    top: 25%;
-    right: 0;
-    z-index: 1;
-}
-
-.mv-area .catch_3{
-    font-size: 40px;
-    line-height: 2;
-    text-shadow: 0 5px 7px #000;
-    text-align: right;
-    position: absolute;
-    top: 35%;
     right: 0;
     z-index: 1;
 }
@@ -120,21 +98,6 @@
 @keyframes rotation2{
     0%{ transform:rotate(360deg); }
     100%{ transform:rotate(0);}
-}
-
-.glowAnime{
-    color: transparent;
-}
-/* =====キャッチコピーアニメーション===== */
-.glowAnime span{opacity: 0;}
-
-/*アニメーションで透過を0から1に変化させtext-shadowをつける*/
-.glowAnime.glow span{ animation:glow_anime_on 1s ease-out forwards; }
-
-@keyframes glow_anime_on{
-	0% { opacity:0; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
-	50% { opacity:1;text-shadow: 0 0 10px #fff,0 0 15px #fff; }
-	100% { opacity:1; text-shadow: 0 0 0 #fff,0 0 0 #fff;}
 }
 
 /* ------------------------
@@ -299,19 +262,6 @@
         left: 50%;
         transform: translateX(-50%);
     }
-
-    .mv-area .catch_1{
-        font-size: 30px;
-    }
-    
-    .mv-area .catch_2{
-        font-size: 30px;
-    }
-    
-    .mv-area .catch_3{
-        font-size: 30px;
-    }
-
 }
 
 @media screen and (max-width:400px){
