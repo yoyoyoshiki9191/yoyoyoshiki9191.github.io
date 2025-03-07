@@ -680,6 +680,10 @@ footer ul li a::before {
 		width: 48%;
 		text-align: center;
 	}
+
+	#page_top img{
+		display: none;
+	}
 }
 /* 569px以下 */
 @media screen and (max-width: 570px) {
