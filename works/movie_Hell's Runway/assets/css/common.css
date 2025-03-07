@@ -570,8 +570,7 @@ footer .copyright{
     }
 
     .to-top img{
-        width: 10%;
-        height: 10%;
+        display: none;
     }
 
 }
