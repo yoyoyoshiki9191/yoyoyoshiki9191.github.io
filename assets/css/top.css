@@ -351,7 +351,7 @@ body.appear #wrapper,body.appear #particles-js{
 /* about mak */
 .about-img img{
 	width:100%;
-	max-width: 20vw;
+	max-width: 30vw;
 	margin-bottom: 0.5rem;
 }
 
@@ -438,7 +438,7 @@ body.appear #wrapper,body.appear #particles-js{
 	}
 
 	.about-img img{
-		max-width: 60vw;
+		max-width: 80vw;
 	}
 
 	.works-img img{

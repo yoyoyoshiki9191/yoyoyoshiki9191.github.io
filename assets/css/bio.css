@@ -2,7 +2,7 @@
 
 .bio-img img{
 	width: 100%;
-	max-width: 20vw;
+	max-width: 30vw;
 	margin-bottom: 0.5rem;
 }
 
@@ -44,7 +44,7 @@
 @media screen and (max-width:768px){
 
 .bio-img img{
-	max-width: 60vw;
+	max-width: 80vw;
 	margin-bottom: 0.5rem;
 }
 
